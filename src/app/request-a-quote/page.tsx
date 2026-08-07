@@ -5,8 +5,8 @@ import { Breadcrumbs, PageHero } from "@/components/PageSections";
 import { PhoneIcon, ClockIcon, MapPinIcon, CheckIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: `Request a Free Quote | ${siteConfig.location.city}, MI Lawn Care`,
-  description: `Request a free lawn care quote from Brad's Lawn Services in ${siteConfig.location.city}, MI. Mowing, brush hogging, aeration, leaf cleanup, and snow plowing. Or call ${siteConfig.phone.display}.`,
+  title: `Request a Free Quote | ${siteConfig.location.city}`,
+  description: `Get a free lawn care quote from Brad's Lawn Services in ${siteConfig.location.city}, MI. Mowing, brush hogging, aeration, leaf cleanup, snow. Call ${siteConfig.phone.display}.`,
   alternates: { canonical: "/request-a-quote" },
 };
 

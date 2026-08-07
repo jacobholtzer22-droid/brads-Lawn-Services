@@ -5,7 +5,7 @@ import { Breadcrumbs, PageHero } from "@/components/PageSections";
 import { CheckIcon, PhoneIcon, MailIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: `Employment | Lawn Care Jobs in ${siteConfig.location.city}, MI`,
+  title: `Lawn Care Jobs in ${siteConfig.location.city}, MI`,
   description: `Brad's Lawn Services is always looking for skilled, qualified crew members in ${siteConfig.location.city}, MI. See what we look for and call ${siteConfig.phone.display} to apply.`,
   alternates: { canonical: "/employment" },
 };

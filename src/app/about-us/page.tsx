@@ -13,8 +13,8 @@ import {
 import { CheckIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: `About Brad's Lawn Services | ${siteConfig.location.city}, MI`,
-  description: `Brad's Lawn Services has been a family business in ${siteConfig.location.city}, MI since ${siteConfig.sinceYear}. Learn what "Service With An Edge" means and how we work.`,
+  title: `About Our ${siteConfig.location.city} Lawn Care Team`,
+  description: `Brad's Lawn Services has been a family business in ${siteConfig.location.city}, MI since ${siteConfig.sinceYear}. Learn what "Service With An Edge" means and how we care for lawns here.`,
   alternates: { canonical: "/about-us" },
 };
 

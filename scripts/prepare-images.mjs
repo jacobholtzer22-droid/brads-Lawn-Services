@@ -44,6 +44,14 @@ async function run() {
     .png()
     .toFile(join(OUTPUT_DIR, "logo-512.png"));
 
+  // Open Graph image: 1200x630 JPEG from the strongest real photo.
+  // JPEG (not WebP) for maximum compatibility across social/chat previews.
+  await sharp(join(INPUT_DIR, "photos/schema-image-2.jpg"))
+    .resize(1200, 630, { fit: "cover", position: "center" })
+    .jpeg({ quality: 85 })
+    .toFile(join(OUTPUT_DIR, "og-image.jpg"));
+  console.log("  ✓ photos/schema-image-2.jpg → og-image.jpg (1200x630)");
+
   let converted = 0;
   for (const [src, { out, width }] of Object.entries(SLOTS)) {
     const inputPath = join(INPUT_DIR, src);

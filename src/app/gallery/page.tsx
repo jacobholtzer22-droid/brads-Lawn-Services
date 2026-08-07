@@ -5,7 +5,7 @@ import { Breadcrumbs, PageHero, CTASection } from "@/components/PageSections";
 import { GalleryGrid } from "./GalleryGrid";
 
 export const metadata: Metadata = {
-  title: `Photo Gallery | Lawn Care in ${siteConfig.location.city}, MI`,
+  title: `Photo Gallery | ${siteConfig.location.city}, MI`,
   description: `Photos of real Brad's Lawn Services work around ${siteConfig.location.city}, MI — mowing, brush hogging, core aeration, leaf cleanup, snow plowing, and our equipment.`,
   alternates: { canonical: "/gallery" },
 };

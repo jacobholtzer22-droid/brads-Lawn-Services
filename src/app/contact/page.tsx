@@ -12,7 +12,7 @@ import {
 } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: `Contact Us | Lawn Care in ${siteConfig.location.city}, MI`,
+  title: `Contact Us | ${siteConfig.location.city}, MI`,
   description: `Call Brad's Lawn Services at ${siteConfig.phone.display} for lawn care in ${siteConfig.location.city}, MI. Open 24 hours, seven days a week. Serving ZIP codes ${siteConfig.serviceArea.zips.join(", ")}.`,
   alternates: { canonical: "/contact" },
 };

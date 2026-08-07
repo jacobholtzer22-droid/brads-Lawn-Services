@@ -26,13 +26,26 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: `${siteConfig.name} provides professional lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in ${siteConfig.location.city}, ${siteConfig.location.state}. ${siteConfig.availability}.`,
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: siteConfig.name,
+    url: siteConfig.siteUrl,
+    title: `${siteConfig.name} | Lawn Care in ${siteConfig.location.city}, ${siteConfig.location.state}`,
+    description: `Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in ${siteConfig.location.city}, ${siteConfig.location.state}. ${siteConfig.tagline}.`,
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: `Freshly mowed and striped lawn maintained by ${siteConfig.name} in ${siteConfig.location.city}, ${siteConfig.location.state}`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/images/og-image.jpg"],
   },
   ...(siteConfig.googleSiteVerification && {
     verification: { google: siteConfig.googleSiteVerification },

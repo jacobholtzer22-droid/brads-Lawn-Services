@@ -7,8 +7,8 @@ import { Breadcrumbs, PageHero, CTASection } from "@/components/PageSections";
 import { MapPinIcon, PhoneIcon, ArrowRightIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: `Areas We Serve | Lawn Care in ${siteConfig.location.city}, MI`,
-  description: `Brad's Lawn Services covers ${siteConfig.location.city}, MI and the surrounding areas, including ZIP codes ${siteConfig.serviceArea.zips.join(", ")}. Not sure if we reach your street? Call and ask.`,
+  title: `Areas We Serve in ${siteConfig.location.city}, MI`,
+  description: `Brad's Lawn Services covers ${siteConfig.location.city}, MI and surrounding areas, including ZIP codes ${siteConfig.serviceArea.zips.join(", ")}. Not sure we reach you? Just call.`,
   alternates: { canonical: "/areas-we-serve" },
 };
 

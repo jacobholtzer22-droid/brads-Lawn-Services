@@ -9,8 +9,8 @@ import { Breadcrumbs, PageHero, CTASection } from "@/components/PageSections";
 import { StarIcon, ArrowRightIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: `Customer Reviews | ${siteConfig.location.city}, MI Lawn Care`,
-  description: `Read what ${siteConfig.location.city}, MI customers say about Brad's Lawn Services — mowing, brush hogging, aeration, leaf cleanup, and snow plowing. Leave your own Google review.`,
+  title: `Customer Reviews | ${siteConfig.location.city}, MI`,
+  description: `Read what real ${siteConfig.location.city}, MI customers say about Brad's Lawn Services — lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing.`,
   alternates: { canonical: "/reviews" },
 };
 
