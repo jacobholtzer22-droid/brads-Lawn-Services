@@ -43,9 +43,38 @@
   }
 }
 
+/* ---------------------------------------------------------------
+   Scroll reveal — progressive enhancement only.
+   Content is ALWAYS in the DOM and visible by default. The hidden
+   state is applied only when the `js` class is present on <html>
+   (set by an inline script in the layout), so with JavaScript
+   disabled every section renders fully visible.
+   Animates transform/opacity only — no layout shift.
+   --------------------------------------------------------------- */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 500ms ease-out,
+    transform 500ms ease-out;
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  /* Reveal targets snap straight to their final state. */
+  .js .reveal,
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 
   *,

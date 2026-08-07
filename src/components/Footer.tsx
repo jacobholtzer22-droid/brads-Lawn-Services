@@ -1,24 +1,31 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site.config";
+import { PhoneIcon, MailIcon, ClockIcon, MapPinIcon } from "@/components/Icons";
+
+const companyLinks = [
+  { label: "About Us", href: "/about-us" },
+  { label: "Reviews", href: "/reviews" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Areas We Serve", href: "/areas-we-serve" },
+  { label: "Employment", href: "/employment" },
+  { label: "Contact", href: "/contact" },
+];
 
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-slate-200 bg-slate-900 text-slate-300">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-slate-900 text-slate-300">
+      <div className="section py-14">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-white">
               Services
-            </h3>
-            <ul className="mt-4 space-y-2">
+            </h2>
+            <ul className="mt-4 space-y-2.5">
               {siteConfig.services.map((s) => (
                 <li key={s.slug}>
-                  <Link
-                    href={`/${s.slug}`}
-                    className="text-sm hover:text-white"
-                  >
+                  <Link href={`/${s.slug}`} className="text-sm hover:text-white">
                     {s.name}
                   </Link>
                 </li>
@@ -27,96 +34,114 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-white">
               Company
-            </h3>
-            <ul className="mt-4 space-y-2">
-              <li>
-                <Link href="/about" className="text-sm hover:text-white">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/reviews" className="text-sm hover:text-white">
-                  Reviews
-                </Link>
-              </li>
-              <li>
-                <Link href="/gallery" className="text-sm hover:text-white">
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-sm hover:text-white">
-                  Contact
-                </Link>
-              </li>
+            </h2>
+            <ul className="mt-4 space-y-2.5">
+              {companyLinks.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-sm hover:text-white">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-white">
               Service Area
-            </h3>
-            <p className="mt-4 text-sm">
-              {siteConfig.serviceArea.description}
+            </h2>
+            <p className="mt-4 flex items-start gap-2 text-sm">
+              <MapPinIcon className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-300" />
+              <span>
+                {siteConfig.serviceArea.description}
+                <br />
+                <span className="text-slate-400">
+                  ZIP codes {siteConfig.serviceArea.zips.join(", ")}
+                </span>
+              </span>
             </p>
-            <p className="mt-2 text-sm text-slate-400">
-              ZIP codes: {siteConfig.serviceArea.zips.join(", ")}
+            <p className="mt-4 flex items-start gap-2 text-sm">
+              <ClockIcon className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-300" />
+              <span>{siteConfig.hours}</span>
             </p>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-white">
               Contact
-            </h3>
-            <ul className="mt-4 space-y-2">
+            </h2>
+            <ul className="mt-4 space-y-2.5">
               <li>
                 <a
                   href={siteConfig.phone.tel}
-                  className="text-sm font-semibold text-brand-300 hover:text-white"
+                  data-tel-cta
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-300 hover:text-white"
                 >
+                  <PhoneIcon className="h-4 w-4" />
                   {siteConfig.phone.display}
                 </a>
               </li>
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="text-sm hover:text-white"
+                  className="inline-flex items-center gap-2 text-sm hover:text-white"
                 >
+                  <MailIcon className="h-4 w-4" />
                   {siteConfig.email}
                 </a>
               </li>
-              <li className="text-sm">{siteConfig.hours}</li>
-              <li className="text-sm">
+              <li className="pt-1 text-sm text-slate-400">
                 {siteConfig.location.poBox}
                 <br />
                 {siteConfig.location.city}, {siteConfig.location.state}{" "}
                 {siteConfig.location.zip}
               </li>
             </ul>
+
+            <ul className="mt-5 space-y-2">
+              <li>
+                <a
+                  href={siteConfig.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-slate-400 hover:text-white"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href={siteConfig.social.homeAdvisor}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-slate-400 hover:text-white"
+                >
+                  HomeAdvisor profile
+                </a>
+              </li>
+              <li>
+                <a
+                  href={siteConfig.social.googleReview}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-slate-400 hover:text-white"
+                >
+                  Leave a Google review
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center gap-4 border-t border-slate-700 pt-8 sm:flex-row sm:justify-between">
+        <div className="mt-12 flex flex-col items-center gap-3 border-t border-slate-700 pt-8 text-center sm:flex-row sm:justify-between sm:text-left">
           <p className="text-xs text-slate-400">
             &copy; {year} {siteConfig.name}. All rights reserved.
           </p>
-          <div className="flex gap-4">
-            {siteConfig.social.facebook && (
-              <a
-                href={siteConfig.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-white"
-                aria-label="Facebook"
-              >
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
-                </svg>
-              </a>
-            )}
-          </div>
+          <p className="text-xs text-slate-400">
+            {siteConfig.tagline} &middot; {siteConfig.motto}
+          </p>
         </div>
       </div>
     </footer>

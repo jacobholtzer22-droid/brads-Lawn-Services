@@ -4,6 +4,7 @@ import { siteConfig } from "@/lib/site.config";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { MobileCTABar } from "@/components/MobileCTABar";
 import "./globals.css";
 
 const body = Source_Sans_3({
@@ -49,22 +50,24 @@ const businessSchema = {
   image: `${siteConfig.siteUrl}/images/logo-512.png`,
   logo: `${siteConfig.siteUrl}/images/logo-512.png`,
   description: `Professional lawn care and grounds maintenance in ${siteConfig.location.city}, ${siteConfig.location.state}. ${siteConfig.motto}.`,
-  address: {
-    "@type": "PostalAddress",
-    postOfficeBoxNumber: siteConfig.location.poBox.replace("P.O. Box ", ""),
-    addressLocality: siteConfig.location.city,
-    addressRegion: siteConfig.location.state,
-    postalCode: siteConfig.location.zip,
-    addressCountry: "US",
-  },
-  areaServed: {
-    "@type": "City",
-    name: siteConfig.location.city,
-    containedInPlace: {
-      "@type": "State",
-      name: siteConfig.location.stateFull,
+  // Deliberately NO address and NO geo: this is a service-area business and
+  // no street address is published anywhere. See seo/FACTS.md.
+  // Deliberately NO aggregateRating / Review: policy decision, see the brief.
+  areaServed: [
+    {
+      "@type": "City",
+      name: siteConfig.location.city,
+      containedInPlace: {
+        "@type": "State",
+        name: siteConfig.location.stateFull,
+      },
     },
-  },
+    ...siteConfig.serviceArea.zips.map((zip) => ({
+      "@type": "PostalCodeRangeSpecification" as const,
+      postalCodeBegin: zip,
+      postalCodeEnd: zip,
+    })),
+  ],
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: siteConfig.hoursStructured.dayOfWeek,
@@ -73,7 +76,7 @@ const businessSchema = {
   },
   foundingDate: String(siteConfig.sinceYear),
   slogan: siteConfig.motto,
-  sameAs: [siteConfig.social.facebook],
+  sameAs: [siteConfig.social.facebook, siteConfig.social.homeAdvisor],
   knowsAbout: [
     "Lawn Mowing",
     "Brush Hogging",
@@ -86,9 +89,23 @@ const businessSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${siteConfig.siteUrl}/#website`,
   name: siteConfig.name,
   url: siteConfig.siteUrl,
   publisher: { "@id": `${siteConfig.siteUrl}/#business` },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${siteConfig.siteUrl}/#organization`,
+  name: siteConfig.name,
+  url: siteConfig.siteUrl,
+  logo: `${siteConfig.siteUrl}/images/logo-512.png`,
+  telephone: siteConfig.phone.e164,
+  email: siteConfig.email,
+  foundingDate: String(siteConfig.sinceYear),
+  sameAs: [siteConfig.social.facebook, siteConfig.social.homeAdvisor],
 };
 
 export default function RootLayout({
@@ -98,12 +115,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${body.variable} ${heading.variable}`}>
-      <body className="font-body antialiased">
+      <head>
+        {/*
+          Marks the document as JS-capable so the scroll-reveal CSS can apply
+          its hidden state. Without JS this never runs and all content renders
+          visible. Runs before paint to avoid a flash of revealed content.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.classList.add('js')`,
+          }}
+        />
+      </head>
+      <body className="font-body antialiased pb-16 md:pb-0">
         <JsonLd data={businessSchema} />
         <JsonLd data={websiteSchema} />
+        <JsonLd data={organizationSchema} />
         <Header />
         <main>{children}</main>
         <Footer />
+        <MobileCTABar />
       </body>
     </html>
   );
