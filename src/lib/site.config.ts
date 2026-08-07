@@ -98,6 +98,21 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_CRM_URL ||
     "https://www.alignandacquire.com/api/contact",
   businessSlug: process.env.NEXT_PUBLIC_BUSINESS_SLUG || "REPLACE_ME_SLUG",
+
+  /**
+   * Name of the honeypot field the CRM's spam check reads. Configurable
+   * because the exact field name is a Gate 3 confirmation item — if the
+   * platform expects something other than "website", set the env var rather
+   * than editing the form.
+   */
+  honeypotField: process.env.NEXT_PUBLIC_HONEYPOT_FIELD || "website",
+
+  /**
+   * Cloudflare Turnstile. Empty site key = widget disabled entirely and no
+   * turnstileToken is sent. This is the default until Gate 3 confirms whether
+   * the CRM endpoint requires a token.
+   */
+  turnstileSiteKey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "",
   siteUrl:
     process.env.NEXT_PUBLIC_SITE_URL || "https://www.bradslawnservices.com",
   tracking: {

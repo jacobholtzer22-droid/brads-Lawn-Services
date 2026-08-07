@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site.config";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, PageHero } from "@/components/PageSections";
+import { QuoteForm } from "@/components/QuoteForm";
 import {
   PhoneIcon,
   MailIcon,
@@ -138,22 +139,37 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* ---------- QUOTE CTA ---------- */}
-          <div className="mt-12 rounded-xl bg-brand-600 p-8 text-center sm:p-10">
-            <h2 className="text-2xl font-bold text-white sm:text-3xl">
-              Rather have us come to you?
-            </h2>
-            <p className="mx-auto mt-3 max-w-xl text-brand-50">
-              Send us the details on your property and we will get back to you
-              with a quote.
-            </p>
-            <Link
-              href="/request-a-quote"
-              className="mt-7 inline-flex min-h-[44px] items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-700 transition-colors hover:bg-brand-50"
-            >
-              Request a free quote
-              <ArrowRightIcon className="ml-2 h-5 w-5" />
-            </Link>
+          {/* ---------- QUOTE FORM ---------- */}
+          <div className="mt-12 grid gap-10 lg:grid-cols-5">
+            <div className="lg:col-span-3">
+              <QuoteForm />
+            </div>
+            <div className="lg:col-span-2">
+              <div className="rounded-xl bg-brand-600 p-7">
+                <h2 className="text-xl font-bold text-white">
+                  Rather just call?
+                </h2>
+                <p className="mt-3 text-brand-50">
+                  The phone is the fastest way to reach us, and someone is there{" "}
+                  {siteConfig.availability.toLowerCase()}.
+                </p>
+                <a
+                  href={siteConfig.phone.tel}
+                  data-tel-cta
+                  className="mt-6 inline-flex min-h-[44px] w-full items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-700 transition-colors hover:bg-brand-50"
+                >
+                  <PhoneIcon className="mr-2 h-5 w-5" />
+                  {siteConfig.phone.display}
+                </a>
+                <Link
+                  href="/request-a-quote"
+                  className="mt-6 inline-flex items-center text-sm font-semibold text-white hover:text-brand-50"
+                >
+                  See what we&rsquo;ll ask you
+                  <ArrowRightIcon className="ml-1.5 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

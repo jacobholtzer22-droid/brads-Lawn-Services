@@ -5,6 +5,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { MobileCTABar } from "@/components/MobileCTABar";
+import { Analytics } from "@/components/Analytics";
+import Script from "next/script";
 import "./globals.css";
 
 const body = Source_Sans_3({
@@ -148,6 +150,16 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <MobileCTABar />
+        <Analytics />
+        {/* Turnstile loads only when a site key is configured (Gate 3 item). */}
+        {siteConfig.turnstileSiteKey && (
+          <Script
+            id="cf-turnstile"
+            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+            strategy="afterInteractive"
+            defer
+          />
+        )}
       </body>
     </html>
   );

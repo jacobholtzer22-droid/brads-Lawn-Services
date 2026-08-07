@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site.config";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, PageHero } from "@/components/PageSections";
+import { QuoteForm } from "@/components/QuoteForm";
 import { PhoneIcon, ClockIcon, MapPinIcon, CheckIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
@@ -47,27 +48,7 @@ export default function RequestAQuotePage() {
         <div className="section">
           <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
             <div className="lg:col-span-3">
-              {/* QuoteForm is wired up in Phase 4 (lead capture + tracking). */}
-              <div
-                id="quote-form"
-                className="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-10 text-center"
-              >
-                <h2 className="text-lg font-semibold text-slate-900">
-                  Quote form
-                </h2>
-                <p className="mx-auto mt-2 max-w-md text-sm text-slate-600">
-                  The quote form is wired up in the lead-capture phase. Until
-                  then, call or text{" "}
-                  <a
-                    href={siteConfig.phone.tel}
-                    data-tel-cta
-                    className="font-semibold text-brand-700 underline"
-                  >
-                    {siteConfig.phone.display}
-                  </a>
-                  .
-                </p>
-              </div>
+              <QuoteForm />
 
               <h2 className="mt-14 text-2xl font-bold text-slate-900">
                 What we will ask you
