@@ -5,7 +5,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-gray-200 bg-gray-900 text-gray-300">
+    <footer className="border-t border-slate-200 bg-slate-900 text-slate-300">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
@@ -16,7 +16,7 @@ export function Footer() {
               {siteConfig.services.map((s) => (
                 <li key={s.slug}>
                   <Link
-                    href={`/services#${s.slug}`}
+                    href={`/${s.slug}`}
                     className="text-sm hover:text-white"
                   >
                     {s.name}
@@ -61,7 +61,7 @@ export function Footer() {
             <p className="mt-4 text-sm">
               {siteConfig.serviceArea.description}
             </p>
-            <p className="mt-2 text-sm text-gray-400">
+            <p className="mt-2 text-sm text-slate-400">
               ZIP codes: {siteConfig.serviceArea.zips.join(", ")}
             </p>
           </div>
@@ -74,7 +74,7 @@ export function Footer() {
               <li>
                 <a
                   href={siteConfig.phone.tel}
-                  className="text-sm font-semibold text-brand-green-light hover:text-white"
+                  className="text-sm font-semibold text-brand-300 hover:text-white"
                 >
                   {siteConfig.phone.display}
                 </a>
@@ -98,8 +98,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center gap-4 border-t border-gray-700 pt-8 sm:flex-row sm:justify-between">
-          <p className="text-xs text-gray-500">
+        <div className="mt-10 flex flex-col items-center gap-4 border-t border-slate-700 pt-8 sm:flex-row sm:justify-between">
+          <p className="text-xs text-slate-400">
             &copy; {year} {siteConfig.name}. All rights reserved.
           </p>
           <div className="flex gap-4">
@@ -108,7 +108,7 @@ export function Footer() {
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
+                className="text-slate-400 hover:text-white"
                 aria-label="Facebook"
               >
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">

@@ -7,6 +7,9 @@ export const siteConfig = {
   },
   email: "callbrad269@gmail.com",
   motto: "Service With An Edge",
+  tagline: "A Family Business Since 2010",
+  positioning: "Full service grounds maintenance and landscape provider",
+  serves: "Residential and commercial properties",
   sinceYear: 2010,
   hours: "Mon – Sun, Open 24 Hours",
   hoursStructured: {

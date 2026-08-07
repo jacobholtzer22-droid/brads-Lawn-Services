@@ -18,7 +18,7 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+    <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -29,7 +29,7 @@ export function Header() {
             className="h-10 w-10 sm:h-12 sm:w-12"
             priority
           />
-          <span className="text-lg font-bold text-gray-900 sm:text-xl">
+          <span className="text-lg font-bold text-slate-900 sm:text-xl">
             {siteConfig.name}
           </span>
         </Link>
@@ -39,7 +39,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-green"
+              className="rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-brand-600"
             >
               {link.label}
             </Link>
@@ -49,13 +49,13 @@ export function Header() {
         <div className="hidden items-center gap-3 md:flex">
           <a
             href={siteConfig.phone.tel}
-            className="text-sm font-semibold text-brand-green hover:text-brand-green-dark"
+            className="text-sm font-semibold text-brand-600 hover:text-brand-700"
           >
             {siteConfig.phone.display}
           </a>
           <Link
             href="/contact"
-            className="rounded-lg bg-brand-green px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-green-dark"
+            className="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-700"
           >
             Request A Quote
           </Link>
@@ -64,7 +64,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setMenuOpen(!menuOpen)}
-          className="rounded-md p-2 text-gray-700 md:hidden"
+          className="-mr-2 flex h-11 w-11 items-center justify-center rounded-md text-slate-700 md:hidden"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
         >
@@ -93,14 +93,14 @@ export function Header() {
       </div>
 
       {menuOpen && (
-        <div className="border-t border-gray-100 bg-white md:hidden">
+        <div className="border-t border-slate-100 bg-white md:hidden">
           <div className="space-y-1 px-4 pb-4 pt-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-green"
+                className="block rounded-md px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600"
               >
                 {link.label}
               </Link>
@@ -108,14 +108,14 @@ export function Header() {
             <div className="flex flex-col gap-2 pt-3">
               <a
                 href={siteConfig.phone.tel}
-                className="text-center text-base font-semibold text-brand-green"
+                className="text-center text-base font-semibold text-brand-600"
               >
                 {siteConfig.phone.display}
               </a>
               <Link
                 href="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="rounded-lg bg-brand-green px-4 py-3 text-center text-base font-semibold text-white shadow-sm"
+                className="rounded-lg bg-brand-600 px-4 py-3 text-center text-base font-semibold text-white shadow-sm"
               >
                 Request A Quote
               </Link>

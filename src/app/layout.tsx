@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
+import { Lexend, Source_Sans_3 } from "next/font/google";
 import { siteConfig } from "@/lib/site.config";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import "./globals.css";
 
-const inter = Inter({
+const body = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
 });
 
-const montserrat = Montserrat({
+const heading = Lexend({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
@@ -97,8 +97,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
-      <body className="font-body">
+    <html lang="en" className={`${body.variable} ${heading.variable}`}>
+      <body className="font-body antialiased">
         <JsonLd data={businessSchema} />
         <JsonLd data={websiteSchema} />
         <Header />
