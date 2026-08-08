@@ -28,18 +28,19 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
       <div className="mx-auto flex max-w-content items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex flex-shrink-0 items-center gap-2">
+          {/*
+            The asset is the full wordmark, so it stands alone — no adjacent
+            text span, which would just repeat it. Intrinsic size must match
+            the real 200x60 (3.33:1) ratio; it was 48x48, which squashed it.
+          */}
           <Image
             src={images.logoSm.src}
-            alt={images.logoSm.alt}
-            width={48}
-            height={48}
-            className="h-10 w-10 sm:h-12 sm:w-12"
+            alt={siteConfig.name}
+            width={200}
+            height={60}
+            className="h-9 w-auto sm:h-11"
             priority
           />
-          <span className="text-base font-bold leading-tight text-slate-900 sm:text-lg">
-            Brad&rsquo;s Lawn
-            <br className="hidden sm:block" /> Services
-          </span>
         </Link>
 
         {/* ---------- desktop nav ---------- */}

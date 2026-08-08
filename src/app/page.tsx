@@ -331,7 +331,20 @@ export default function HomePage() {
           </Reveal>
         </div>
 
-        <ul className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:px-6 lg:px-8 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-300">
+        {/*
+          `contain:layout paint` is load-bearing, not decorative.
+
+          Without it this full-bleed scroller widens the mobile LAYOUT viewport
+          even though overflow-x:auto clips it visually — window.innerWidth
+          measured 1560 on a 390px screen. The position:fixed mobile CTA bar
+          sizes to that viewport, so it rendered 1560px wide with "Get a Quote"
+          off-screen. Containment isolates this subtree's layout so its
+          overflow can't reach the viewport calculation.
+
+          Verified: overflow-hidden wrappers, max-width, width:100%, and
+          scroll-snap-type:none all fail to fix it. Containment is what works.
+        */}
+        <ul className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 [contain:layout_paint] sm:px-6 lg:px-8 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-300">
           {featuredReviews.map((review) => (
             <li
               key={review.name}

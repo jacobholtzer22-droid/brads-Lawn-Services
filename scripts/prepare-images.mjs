@@ -44,6 +44,37 @@ async function run() {
     .png()
     .toFile(join(OUTPUT_DIR, "logo-512.png"));
 
+  // App icons. Next's App Router picks these up from src/app/ automatically
+  // and emits the <link rel="icon"> tags, which also stops the browser's
+  // fallback /favicon.ico request from 404ing on every page load.
+  await mkdir("src/app", { recursive: true });
+  await sharp(join(INPUT_DIR, "logos/logo-full.png"))
+    .resize(512, 512, {
+      fit: "contain",
+      background: { r: 255, g: 255, b: 255, alpha: 0 },
+    })
+    .png()
+    .toFile("src/app/icon.png");
+  console.log("  ✓ logos/logo-full.png → src/app/icon.png (512x512)");
+
+  // Apple touch icon: opaque white, since iOS composites transparency to black.
+  await sharp(join(INPUT_DIR, "logos/logo-full.png"))
+    .resize(160, 160, {
+      fit: "contain",
+      background: { r: 255, g: 255, b: 255, alpha: 1 },
+    })
+    .extend({
+      top: 10,
+      bottom: 10,
+      left: 10,
+      right: 10,
+      background: { r: 255, g: 255, b: 255, alpha: 1 },
+    })
+    .flatten({ background: { r: 255, g: 255, b: 255 } })
+    .png()
+    .toFile("src/app/apple-icon.png");
+  console.log("  ✓ logos/logo-full.png → src/app/apple-icon.png (180x180)");
+
   // Open Graph image: 1200x630 JPEG from the strongest real photo.
   // JPEG (not WebP) for maximum compatibility across social/chat previews.
   await sharp(join(INPUT_DIR, "photos/schema-image-2.jpg"))

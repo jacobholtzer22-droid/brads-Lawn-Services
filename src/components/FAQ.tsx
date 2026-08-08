@@ -20,38 +20,46 @@ export function FAQ({
             {heading}
           </h2>
 
-          <dl className="mt-10 divide-y divide-slate-200 border-t border-slate-200">
+          {/*
+            Plain <details> rather than <dl>/<dt>/<dd>. A <dl> may only contain
+            <dt>, <dd>, <div>, <script> or <template>, so wrapping each pair in
+            <details> produced invalid markup that axe flagged. The machine-
+            readable Q&A semantics come from the FAQPage JSON-LD, not the list
+            element, so nothing is lost — and <h3> gives a correct heading
+            hierarchy under the section's <h2>.
+          */}
+          <div className="mt-10 divide-y divide-slate-200 border-t border-slate-200">
             {items.map((item) => (
-              <div key={item.q} className="py-2">
-                <details className="group">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-left text-lg font-semibold text-slate-900 [&::-webkit-details-marker]:hidden">
-                    <dt>{item.q}</dt>
-                    <span
-                      aria-hidden="true"
-                      className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition-colors group-open:border-brand-600 group-open:bg-brand-600 group-open:text-white"
+              <details key={item.q} className="group py-2">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-left [&::-webkit-details-marker]:hidden">
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    {item.q}
+                  </h3>
+                  <span
+                    aria-hidden="true"
+                    className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition-colors group-open:border-brand-600 group-open:bg-brand-600 group-open:text-white"
+                  >
+                    <svg
+                      className="h-4 w-4 transition-transform group-open:rotate-45"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
                     >
-                      <svg
-                        className="h-4 w-4 transition-transform group-open:rotate-45"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={2}
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M12 4.5v15m7.5-7.5h-15"
-                        />
-                      </svg>
-                    </span>
-                  </summary>
-                  <dd className="pb-5 pr-12 text-base leading-relaxed text-slate-600">
-                    {item.a}
-                  </dd>
-                </details>
-              </div>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 4.5v15m7.5-7.5h-15"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+                <p className="pb-5 pr-12 text-base leading-relaxed text-slate-600">
+                  {item.a}
+                </p>
+              </details>
             ))}
-          </dl>
+          </div>
         </div>
       </div>
     </section>
