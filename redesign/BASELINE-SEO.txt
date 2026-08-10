@@ -1,0 +1,2508 @@
+BASELINE SEO SURFACE — frozen contract for the visual redesign
+Generated from the production build by scripts/dump-seo.mjs
+==============================================================================
+
+##############################################################################
+ROUTE: /_not-found
+##############################################################################
+TITLE:       Page Not Found | Brad's Lawn Services
+DESCRIPTION: Brad's Lawn Services provides professional lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. 24/7 — Call Anytime.
+CANONICAL:   https://www.bradslawnservices.com
+ROBOTS:      noindex
+OPENGRAPH:
+  og:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  og:image = https://www.bradslawnservices.com/images/og-image.jpg
+  og:image:alt = Freshly mowed and striped lawn maintained by Brad's Lawn Services in Battle Creek, MI
+  og:image:height = 630
+  og:image:width = 1200
+  og:locale = en_US
+  og:site_name = Brad's Lawn Services
+  og:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+  og:type = website
+  og:url = https://www.bradslawnservices.com
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+JSON-LD BLOCKS: 3
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+
+##############################################################################
+ROUTE: /about-us
+##############################################################################
+TITLE:       About Our Battle Creek Lawn Care Team | Brad's Lawn Services
+DESCRIPTION: Brad's Lawn Services has been a family business in Battle Creek, MI since 2010. Learn what "Service With An Edge" means and how we care for lawns here.
+CANONICAL:   https://www.bradslawnservices.com/about-us
+ROBOTS:      (none)
+OPENGRAPH:
+  og:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  og:image = https://www.bradslawnservices.com/images/og-image.jpg
+  og:image:alt = Freshly mowed and striped lawn maintained by Brad's Lawn Services in Battle Creek, MI
+  og:image:height = 630
+  og:image:width = 1200
+  og:locale = en_US
+  og:site_name = Brad's Lawn Services
+  og:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+  og:type = website
+  og:url = https://www.bradslawnservices.com
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+JSON-LD BLOCKS: 4
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+--- json-ld[3] ---
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bradslawnservices.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About Us",
+      "item": "https://www.bradslawnservices.com/about-us"
+    }
+  ]
+}
+
+##############################################################################
+ROUTE: /areas-we-serve
+##############################################################################
+TITLE:       Areas We Serve in Battle Creek, MI | Brad's Lawn Services
+DESCRIPTION: Brad's Lawn Services covers Battle Creek, MI and surrounding areas, including ZIP codes 49014, 49015, 49017, 49037. Not sure we reach you? Just call.
+CANONICAL:   https://www.bradslawnservices.com/areas-we-serve
+ROBOTS:      (none)
+OPENGRAPH:
+  og:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  og:image = https://www.bradslawnservices.com/images/og-image.jpg
+  og:image:alt = Freshly mowed and striped lawn maintained by Brad's Lawn Services in Battle Creek, MI
+  og:image:height = 630
+  og:image:width = 1200
+  og:locale = en_US
+  og:site_name = Brad's Lawn Services
+  og:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+  og:type = website
+  og:url = https://www.bradslawnservices.com
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+JSON-LD BLOCKS: 4
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+--- json-ld[3] ---
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bradslawnservices.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Areas We Serve",
+      "item": "https://www.bradslawnservices.com/areas-we-serve"
+    }
+  ]
+}
+
+##############################################################################
+ROUTE: /brush-hogging
+##############################################################################
+TITLE:       Brush Hogging in Battle Creek, MI | Brad's Lawn Services
+DESCRIPTION: Brad's Lawn Services clears overgrown property in Battle Creek, MI and the surrounding areas with professional brush hogging equipment. We cut down overgrown 
+CANONICAL:   https://www.bradslawnservices.com/brush-hogging
+ROBOTS:      (none)
+OPENGRAPH:
+  og:description = Brad's Lawn Services clears overgrown property in Battle Creek, MI and the surrounding areas with professional brush hogging equipment. We cut down overgrown 
+  og:title = Brush Hogging in Battle Creek, MI
+  og:url = https://www.bradslawnservices.com/brush-hogging
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Brad's Lawn Services clears overgrown property in Battle Creek, MI and the surrounding areas with professional brush hogging equipment. We cut down overgrown 
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Brush Hogging in Battle Creek, MI
+JSON-LD BLOCKS: 6
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+--- json-ld[3] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Brush Hogging",
+  "serviceType": "Brush Hogging",
+  "description": "Brad's Lawn Services clears overgrown property in Battle Creek, MI and the surrounding areas with professional brush hogging equipment. We cut down overgrown trees, brush, and tall grass, then clean up and haul away the debris.",
+  "url": "https://www.bradslawnservices.com/brush-hogging",
+  "provider": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ]
+}
+--- json-ld[4] ---
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bradslawnservices.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brush Hogging",
+      "item": "https://www.bradslawnservices.com/brush-hogging"
+    }
+  ]
+}
+--- json-ld[5] ---
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does brush hogging cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on how much area needs clearing, how heavy and woody the growth is, how accessible the ground is, and how much debris has to be hauled off. Call (269) 589-9458 and describe the property and we will quote it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How overgrown is too overgrown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Brush hogging is made for growth that a mower cannot handle, including tall grass, heavy brush, and small trees. Tell us what is out there and we will tell you honestly whether it is a fit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you haul the debris away?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Cleaning up and hauling away the debris is part of the job, not an add-on you have to arrange separately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you grind out stumps too?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, stump grinding is available. Mention it when you call so we bring the right attachment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you brush hog fields and vacant lots?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Field mowing and overgrown lot clearing are both regular jobs for us in the Battle Creek area."
+      }
+    }
+  ]
+}
+
+##############################################################################
+ROUTE: /contact
+##############################################################################
+TITLE:       Contact Us | Battle Creek, MI | Brad's Lawn Services
+DESCRIPTION: Call Brad's Lawn Services at (269) 589-9458 for lawn care in Battle Creek, MI. Open 24 hours, seven days a week. Serving ZIP codes 49014, 49015, 49017, 49037.
+CANONICAL:   https://www.bradslawnservices.com/contact
+ROBOTS:      (none)
+OPENGRAPH:
+  og:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  og:image = https://www.bradslawnservices.com/images/og-image.jpg
+  og:image:alt = Freshly mowed and striped lawn maintained by Brad's Lawn Services in Battle Creek, MI
+  og:image:height = 630
+  og:image:width = 1200
+  og:locale = en_US
+  og:site_name = Brad's Lawn Services
+  og:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+  og:type = website
+  og:url = https://www.bradslawnservices.com
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+JSON-LD BLOCKS: 4
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+--- json-ld[3] ---
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bradslawnservices.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://www.bradslawnservices.com/contact"
+    }
+  ]
+}
+
+##############################################################################
+ROUTE: /core-aeration
+##############################################################################
+TITLE:       Core Aeration in Battle Creek, MI | Brad's Lawn Services
+DESCRIPTION: Brad's Lawn Services provides core aeration for lawns in Battle Creek, MI and the surrounding areas. Core aeration pulls small plugs of soil out of your lawn,
+CANONICAL:   https://www.bradslawnservices.com/core-aeration
+ROBOTS:      (none)
+OPENGRAPH:
+  og:description = Brad's Lawn Services provides core aeration for lawns in Battle Creek, MI and the surrounding areas. Core aeration pulls small plugs of soil out of your lawn,
+  og:title = Core Aeration in Battle Creek, MI
+  og:url = https://www.bradslawnservices.com/core-aeration
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Brad's Lawn Services provides core aeration for lawns in Battle Creek, MI and the surrounding areas. Core aeration pulls small plugs of soil out of your lawn,
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Core Aeration in Battle Creek, MI
+JSON-LD BLOCKS: 6
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+--- json-ld[3] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Core Aeration",
+  "serviceType": "Core Aeration",
+  "description": "Brad's Lawn Services provides core aeration for lawns in Battle Creek, MI and the surrounding areas. Core aeration pulls small plugs of soil out of your lawn, roughly three quarters of an inch across and two to three inches long, so air and water can reach the root system.",
+  "url": "https://www.bradslawnservices.com/core-aeration",
+  "provider": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ]
+}
+--- json-ld[4] ---
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bradslawnservices.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Core Aeration",
+      "item": "https://www.bradslawnservices.com/core-aeration"
+    }
+  ]
+}
+--- json-ld[5] ---
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does core aeration do for my lawn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It opens up compacted soil so air, water, and nutrients reach the roots. That promotes healthier grass, decreases weed growth, reduces water runoff, minimizes soil compaction, and improves how well your lawn handles drought."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does core aeration cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It comes down to the size of your lawn and its current condition. There is no flat rate. Call (269) 589-9458 with your address and we will quote the lawn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the plugs left on my lawn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Those are the soil cores the aerator pulled out, about three quarters of an inch in diameter and two to three inches long. They are meant to stay on the surface and break down back into the lawn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I aerate and seed at the same time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seeding is one of the services we offer alongside mowing and aeration. Mention it when you call and we will talk through what makes sense for your lawn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if my lawn is compacted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common signs are hard ground, water running off instead of soaking in, thin grass that will not fill in, and heavily used areas that look worse than the rest of the yard."
+      }
+    }
+  ]
+}
+
+##############################################################################
+ROUTE: /employment
+##############################################################################
+TITLE:       Lawn Care Jobs in Battle Creek, MI | Brad's Lawn Services
+DESCRIPTION: Brad's Lawn Services is always looking for skilled, qualified crew members in Battle Creek, MI. See what we look for and call (269) 589-9458 to apply.
+CANONICAL:   https://www.bradslawnservices.com/employment
+ROBOTS:      (none)
+OPENGRAPH:
+  og:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  og:image = https://www.bradslawnservices.com/images/og-image.jpg
+  og:image:alt = Freshly mowed and striped lawn maintained by Brad's Lawn Services in Battle Creek, MI
+  og:image:height = 630
+  og:image:width = 1200
+  og:locale = en_US
+  og:site_name = Brad's Lawn Services
+  og:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+  og:type = website
+  og:url = https://www.bradslawnservices.com
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+JSON-LD BLOCKS: 4
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+--- json-ld[3] ---
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bradslawnservices.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Employment",
+      "item": "https://www.bradslawnservices.com/employment"
+    }
+  ]
+}
+
+##############################################################################
+ROUTE: /gallery
+##############################################################################
+TITLE:       Photo Gallery | Battle Creek, MI | Brad's Lawn Services
+DESCRIPTION: Photos of real Brad's Lawn Services work around Battle Creek, MI — mowing, brush hogging, core aeration, leaf cleanup, snow plowing, and our equipment.
+CANONICAL:   https://www.bradslawnservices.com/gallery
+ROBOTS:      (none)
+OPENGRAPH:
+  og:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  og:image = https://www.bradslawnservices.com/images/og-image.jpg
+  og:image:alt = Freshly mowed and striped lawn maintained by Brad's Lawn Services in Battle Creek, MI
+  og:image:height = 630
+  og:image:width = 1200
+  og:locale = en_US
+  og:site_name = Brad's Lawn Services
+  og:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+  og:type = website
+  og:url = https://www.bradslawnservices.com
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+JSON-LD BLOCKS: 4
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+--- json-ld[3] ---
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bradslawnservices.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Gallery",
+      "item": "https://www.bradslawnservices.com/gallery"
+    }
+  ]
+}
+
+##############################################################################
+ROUTE: /
+##############################################################################
+TITLE:       Brad's Lawn Services | Lawn Care in Battle Creek, MI
+DESCRIPTION: Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010. Call (269) 589-9458 anytime.
+CANONICAL:   https://www.bradslawnservices.com
+ROBOTS:      (none)
+OPENGRAPH:
+  og:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  og:image = https://www.bradslawnservices.com/images/og-image.jpg
+  og:image:alt = Freshly mowed and striped lawn maintained by Brad's Lawn Services in Battle Creek, MI
+  og:image:height = 630
+  og:image:width = 1200
+  og:locale = en_US
+  og:site_name = Brad's Lawn Services
+  og:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+  og:type = website
+  og:url = https://www.bradslawnservices.com
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+JSON-LD BLOCKS: 5
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+--- json-ld[3] ---
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Services offered by Brad's Lawn Services",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "name": "Lawn Mowing",
+        "description": "Weekly mowing, edging, trimming, and walkway blowing for residential and commercial properties.",
+        "url": "https://www.bradslawnservices.com/lawn-mowing",
+        "provider": {
+          "@id": "https://www.bradslawnservices.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Battle Creek"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "name": "Brush Hogging",
+        "description": "Clear overgrown fields, brush, and tall grass with professional-grade tractor equipment.",
+        "url": "https://www.bradslawnservices.com/brush-hogging",
+        "provider": {
+          "@id": "https://www.bradslawnservices.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Battle Creek"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Service",
+        "name": "Core Aeration",
+        "description": "Reduce soil compaction and promote healthier grass growth with professional core aeration.",
+        "url": "https://www.bradslawnservices.com/core-aeration",
+        "provider": {
+          "@id": "https://www.bradslawnservices.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Battle Creek"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Service",
+        "name": "Leaf Cleanup",
+        "description": "Spring, fall, and storm cleanup with professional leaf blowers, vacuums, and curbside pickup.",
+        "url": "https://www.bradslawnservices.com/leaf-cleanup",
+        "provider": {
+          "@id": "https://www.bradslawnservices.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Battle Creek"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Service",
+        "name": "Snow Plowing",
+        "description": "Commercial snow removal, plowing, and salting for lots, drives, sidewalks, and parking areas.",
+        "url": "https://www.bradslawnservices.com/snow-plowing",
+        "provider": {
+          "@id": "https://www.bradslawnservices.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Battle Creek"
+        }
+      }
+    }
+  ]
+}
+--- json-ld[4] ---
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas does Brad's Lawn Services cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve Battle Creek, MI and the surrounding areas, including ZIP codes 49014, 49015, 49017, and 49037. If you are not sure whether we reach your street, call (269) 589-9458 and ask."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does lawn care cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no flat rate, because no two properties are the same. Price comes down to the size of the property, its current condition, which services you need, and how often you want us out. Call and we will give you a real number for your address."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with businesses as well as homes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We serve both residential and commercial properties, from single-family homes to offices, retail, light industrial, and multi-family properties."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long has Brad's Lawn Services been in business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We have been a family business since 2010. What started as one person's push to stand out in the industry has grown into a full service grounds maintenance and landscape provider."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I really call at any hour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our listed hours are Monday through Sunday, open 24 hours. Call (269) 589-9458 whenever it works for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does “Service With An Edge” mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three things. Service is our commitment to solving your lawn care needs. Edge is the high level of equipment maintenance and sharp blades that give a clean cut. And edge is the sharp defined lines in our edging and trimming that set us apart."
+      }
+    }
+  ]
+}
+
+##############################################################################
+ROUTE: /lawn-mowing
+##############################################################################
+TITLE:       Lawn Mowing in Battle Creek, MI | Brad's Lawn Services
+DESCRIPTION: Brad's Lawn Services mows residential and commercial lawns throughout Battle Creek, MI and the surrounding areas. We handle weekly maintenance, edging, trimmi
+CANONICAL:   https://www.bradslawnservices.com/lawn-mowing
+ROBOTS:      (none)
+OPENGRAPH:
+  og:description = Brad's Lawn Services mows residential and commercial lawns throughout Battle Creek, MI and the surrounding areas. We handle weekly maintenance, edging, trimmi
+  og:title = Lawn Mowing in Battle Creek, MI
+  og:url = https://www.bradslawnservices.com/lawn-mowing
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Brad's Lawn Services mows residential and commercial lawns throughout Battle Creek, MI and the surrounding areas. We handle weekly maintenance, edging, trimmi
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Lawn Mowing in Battle Creek, MI
+JSON-LD BLOCKS: 6
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+--- json-ld[3] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Lawn Mowing",
+  "serviceType": "Lawn Mowing",
+  "description": "Brad's Lawn Services mows residential and commercial lawns throughout Battle Creek, MI and the surrounding areas. We handle weekly maintenance, edging, trimming, and cleanup so your property looks sharp without you touching a mower.",
+  "url": "https://www.bradslawnservices.com/lawn-mowing",
+  "provider": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ]
+}
+--- json-ld[4] ---
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bradslawnservices.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Lawn Mowing",
+      "item": "https://www.bradslawnservices.com/lawn-mowing"
+    }
+  ]
+}
+--- json-ld[5] ---
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does lawn mowing cost in Battle Creek?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Price depends on the size of your lawn, how much trimming and edging it needs, the condition it is in when we start, and how often you want service. We do not use a flat rate because every property is different. Call (269) 589-9458 and we will give you a real number for your address."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you mow commercial properties?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We serve both homes and offices or businesses. Commercial properties are usually on a weekly maintenance schedule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you mow while I am out of town?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Vacation lawn care is one of the things we do most. Let us know your dates and we will keep the lawn cut while you are gone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My yard is badly overgrown. Will you still take it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Overgrowth clearing is part of what we do, and for heavier growth we can bring brush hogging equipment instead of a mower. Call and describe what you are dealing with."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to sign a contract?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer weekly maintenance contracts, but we also do as-needed lawn care. You can start with a single cut and decide from there."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you mow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Battle Creek, MI and the surrounding areas, including ZIP codes 49014, 49015, 49017, and 49037. If you are not sure whether we reach your street, just call and ask."
+      }
+    }
+  ]
+}
+
+##############################################################################
+ROUTE: /leaf-cleanup
+##############################################################################
+TITLE:       Leaf Cleanup in Battle Creek, MI | Brad's Lawn Services
+DESCRIPTION: Brad's Lawn Services handles leaf cleanup for homes and businesses in Battle Creek, MI and the surrounding areas. We use professional-grade leaf blowers and v
+CANONICAL:   https://www.bradslawnservices.com/leaf-cleanup
+ROBOTS:      (none)
+OPENGRAPH:
+  og:description = Brad's Lawn Services handles leaf cleanup for homes and businesses in Battle Creek, MI and the surrounding areas. We use professional-grade leaf blowers and v
+  og:title = Leaf Cleanup in Battle Creek, MI
+  og:url = https://www.bradslawnservices.com/leaf-cleanup
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Brad's Lawn Services handles leaf cleanup for homes and businesses in Battle Creek, MI and the surrounding areas. We use professional-grade leaf blowers and v
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Leaf Cleanup in Battle Creek, MI
+JSON-LD BLOCKS: 6
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+--- json-ld[3] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Leaf Cleanup",
+  "serviceType": "Leaf Cleanup",
+  "description": "Brad's Lawn Services handles leaf cleanup for homes and businesses in Battle Creek, MI and the surrounding areas. We use professional-grade leaf blowers and vacuums to clear leaves, limbs, and storm debris, including curbside leaf pickup.",
+  "url": "https://www.bradslawnservices.com/leaf-cleanup",
+  "provider": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ]
+}
+--- json-ld[4] ---
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bradslawnservices.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Leaf Cleanup",
+      "item": "https://www.bradslawnservices.com/leaf-cleanup"
+    }
+  ]
+}
+--- json-ld[5] ---
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does leaf cleanup cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the size of the property, how many trees you have, how deep the leaves are, and whether you need a single cleanup or several passes through the season. Call (269) 589-9458 and we will quote your yard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I schedule fall leaf cleanup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your trees. Some properties need one pass after everything drops, others need a few visits through the fall. Call and we will work out the timing with you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you do curbside leaf pickup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Curbside leaf pickup is part of our fall cleanup service, and we have the vacuum equipment for it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you clean up after a storm?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Storm cleanup covers debris removal and damage restoration. Call us and describe what came down."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you clean gutters too?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Seasonal gutter cleaning is included in our spring cleanup work and is also available with regular lawn maintenance."
+      }
+    }
+  ]
+}
+
+##############################################################################
+ROUTE: /request-a-quote
+##############################################################################
+TITLE:       Request a Free Quote | Battle Creek | Brad's Lawn Services
+DESCRIPTION: Get a free lawn care quote from Brad's Lawn Services in Battle Creek, MI. Mowing, brush hogging, aeration, leaf cleanup, snow. Call (269) 589-9458.
+CANONICAL:   https://www.bradslawnservices.com/request-a-quote
+ROBOTS:      (none)
+OPENGRAPH:
+  og:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  og:image = https://www.bradslawnservices.com/images/og-image.jpg
+  og:image:alt = Freshly mowed and striped lawn maintained by Brad's Lawn Services in Battle Creek, MI
+  og:image:height = 630
+  og:image:width = 1200
+  og:locale = en_US
+  og:site_name = Brad's Lawn Services
+  og:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+  og:type = website
+  og:url = https://www.bradslawnservices.com
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+JSON-LD BLOCKS: 4
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+--- json-ld[3] ---
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bradslawnservices.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Request a Quote",
+      "item": "https://www.bradslawnservices.com/request-a-quote"
+    }
+  ]
+}
+
+##############################################################################
+ROUTE: /reviews
+##############################################################################
+TITLE:       Customer Reviews | Battle Creek, MI | Brad's Lawn Services
+DESCRIPTION: Read what real Battle Creek, MI customers say about Brad's Lawn Services — lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing.
+CANONICAL:   https://www.bradslawnservices.com/reviews
+ROBOTS:      (none)
+OPENGRAPH:
+  og:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  og:image = https://www.bradslawnservices.com/images/og-image.jpg
+  og:image:alt = Freshly mowed and striped lawn maintained by Brad's Lawn Services in Battle Creek, MI
+  og:image:height = 630
+  og:image:width = 1200
+  og:locale = en_US
+  og:site_name = Brad's Lawn Services
+  og:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+  og:type = website
+  og:url = https://www.bradslawnservices.com
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Lawn mowing, brush hogging, core aeration, leaf cleanup, and snow plowing in Battle Creek, MI. A Family Business Since 2010.
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Brad's Lawn Services | Lawn Care in Battle Creek, MI
+JSON-LD BLOCKS: 4
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+--- json-ld[3] ---
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bradslawnservices.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Reviews",
+      "item": "https://www.bradslawnservices.com/reviews"
+    }
+  ]
+}
+
+##############################################################################
+ROUTE: /snow-plowing
+##############################################################################
+TITLE:       Snow Plowing in Battle Creek, MI | Brad's Lawn Services
+DESCRIPTION: Brad's Lawn Services provides commercial snow removal and salting in Battle Creek, MI and the surrounding areas. We plow and salt lots and drive areas, and cl
+CANONICAL:   https://www.bradslawnservices.com/snow-plowing
+ROBOTS:      (none)
+OPENGRAPH:
+  og:description = Brad's Lawn Services provides commercial snow removal and salting in Battle Creek, MI and the surrounding areas. We plow and salt lots and drive areas, and cl
+  og:title = Snow Plowing in Battle Creek, MI
+  og:url = https://www.bradslawnservices.com/snow-plowing
+TWITTER:
+  twitter:card = summary_large_image
+  twitter:description = Brad's Lawn Services provides commercial snow removal and salting in Battle Creek, MI and the surrounding areas. We plow and salt lots and drive areas, and cl
+  twitter:image = https://www.bradslawnservices.com/images/og-image.jpg
+  twitter:title = Snow Plowing in Battle Creek, MI
+JSON-LD BLOCKS: 6
+--- json-ld[0] ---
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.bradslawnservices.com/#business",
+  "name": "Brad's Lawn Services",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "url": "https://www.bradslawnservices.com",
+  "image": "https://www.bradslawnservices.com/images/logo-512.png",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "description": "Professional lawn care and grounds maintenance in Battle Creek, MI. Service With An Edge.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  },
+  "foundingDate": "2010",
+  "slogan": "Service With An Edge",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ],
+  "knowsAbout": [
+    "Lawn Mowing",
+    "Brush Hogging",
+    "Core Aeration",
+    "Leaf Cleanup",
+    "Snow Plowing"
+  ]
+}
+--- json-ld[1] ---
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bradslawnservices.com/#website",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "publisher": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  }
+}
+--- json-ld[2] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bradslawnservices.com/#organization",
+  "name": "Brad's Lawn Services",
+  "url": "https://www.bradslawnservices.com",
+  "logo": "https://www.bradslawnservices.com/images/logo-512.png",
+  "telephone": "+12695899458",
+  "email": "callbrad269@gmail.com",
+  "foundingDate": "2010",
+  "sameAs": [
+    "https://facebook.com/Brads-Lawn-Services-1764061037194337",
+    "http://www.homeadvisor.com/rated.BradsLawnServices.57689174.html"
+  ]
+}
+--- json-ld[3] ---
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Snow Plowing",
+  "serviceType": "Snow Plowing",
+  "description": "Brad's Lawn Services provides commercial snow removal and salting in Battle Creek, MI and the surrounding areas. We plow and salt lots and drive areas, and clear sidewalks and entrances so your property stays open through the winter.",
+  "url": "https://www.bradslawnservices.com/snow-plowing",
+  "provider": {
+    "@id": "https://www.bradslawnservices.com/#business"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Battle Creek",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Michigan"
+      }
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49014",
+      "postalCodeEnd": "49014"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49015",
+      "postalCodeEnd": "49015"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49017",
+      "postalCodeEnd": "49017"
+    },
+    {
+      "@type": "PostalCodeRangeSpecification",
+      "postalCodeBegin": "49037",
+      "postalCodeEnd": "49037"
+    }
+  ]
+}
+--- json-ld[4] ---
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bradslawnservices.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Snow Plowing",
+      "item": "https://www.bradslawnservices.com/snow-plowing"
+    }
+  ]
+}
+--- json-ld[5] ---
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does commercial snow plowing cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the size of the lot, how much sidewalk and entrance area there is, and how you want salting handled. Call (269) 589-9458 to talk through your property and get a quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kinds of properties do you plow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Commercial sites, light industrial, retail, multi-family properties, private roads, and parking areas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you salt as well as plow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Salting is part of our commercial snow and ice service for lots, drives, sidewalks, and entrances."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I set up snow service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Before the season starts. Getting on the schedule early means your property is on the route when the first storm hits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you clear sidewalks and entrances?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Sidewalk and entrance clearing is a separate part of the service from plowing the lot and drive areas."
+      }
+    }
+  ]
+}
+
+==============================================================================
+TOTAL ROUTES: 14

@@ -1,0 +1,80 @@
+BASELINE FORM CONTRACT — frozen for the visual redesign
+Captured from source at Phase 0. Restyling is allowed; this shape is not.
+==============================================================================
+
+SOURCE OF TRUTH
+  Component : src/components/QuoteForm.tsx
+  Submit fn : handleSubmit()            (lines 34-105)
+  Endpoint  : siteConfig.crmUrl         (src/lib/site.config.ts:97-99)
+              -> https://www.alignandacquire.com/api/contact
+              (www is mandatory; the bare apex 308s and the CORS preflight
+               fails against a redirect, silently losing the lead)
+  Method    : POST
+  Headers   : Content-Type: application/json
+
+HONEYPOT
+  Field name: "website"
+  Source    : siteConfig.honeypotField  (src/lib/site.config.ts:108)
+              process.env.NEXT_PUBLIC_HONEYPOT_FIELD || "website"
+  Markup    : src/components/QuoteForm.tsx:264-275
+              offscreen wrapper (absolute left-[-9999px]), aria-hidden="true",
+              input tabIndex={-1}, autoComplete="off", defaultValue=""
+  Semantics : non-empty string => platform treats submission as spam
+
+PAYLOAD SHAPE (exact key set)
+  {
+    "name":         string,   // required, trimmed
+    "phone":        string,   // required, trimmed, >= 10 digits
+    "email":        string,   // optional, format-validated when present
+    "message":      string,   // composed: service / address / details
+    "smsConsent":   boolean,  // checkbox, UNCHECKED by default
+    "businessSlug": string,   // siteConfig.businessSlug
+    "website":      string    // honeypot, "" for real users
+  }
+
+CONDITIONAL KEY
+  "turnstileToken": string
+    Included ONLY when siteConfig.turnstileSiteKey is non-empty.
+    Currently empty => key is ABSENT from the payload.
+
+MESSAGE COMPOSITION (QuoteForm.tsx:66-74)
+  The CRM contract exposes one free-text field, so three inputs are joined
+  with a blank line between each, omitting empty parts:
+    "Service needed: {service}"
+    "Property address: {address}"
+    "{details}"
+
+FORM FIELD NAMES IN THE DOM (must survive restyling)
+  name, phone, email, service, address, details, smsConsent, website
+
+FIRING ORDER ON SUBMIT (must not change)
+  1. preventDefault
+  2. client validation; on failure focus first invalid field and return
+  3. setStatus("submitting")
+  4. await fetch(crmUrl, ...)
+  5. if (!res.ok) throw            <- non-ok must NOT count as success
+  6. setStatus("success")
+  7. trackFormConversion()          <- success branch only
+  8. form.reset()
+  catch -> setStatus("error")       <- error state shows the phone number
+
+CURRENT businessSlug VALUE
+  REPLACE_ME_SLUG
+  (placeholder; a wrong slug returns HTTP 200 and silently drops the lead)
+
+==============================================================================
+RECORDED RUNTIME PAYLOAD
+==============================================================================
+Captured at Phase 0 by submitting the real form against a local mock endpoint,
+with these inputs:
+  name     "BASELINE Test"
+  phone    "(269) 555-0100"
+  email    "baseline@example.com"
+  service  "Core Aeration"
+  address  "1 Baseline Rd, Battle Creek, MI 49015"
+  details  "Baseline capture for redesign freeze proof."
+  smsConsent  checked
+
+The exact JSON the endpoint received is stored alongside this file as
+redesign/BASELINE-PAYLOAD.json. Phase D repeats the submission with the same
+inputs and diffs against that file. The diff must be empty.

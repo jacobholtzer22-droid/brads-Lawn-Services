@@ -1,0 +1,9 @@
+{
+  "name": "BASELINE Test",
+  "phone": "(269) 555-0100",
+  "email": "baseline@example.com",
+  "message": "Service needed: Core Aeration\n\nProperty address: 1 Baseline Rd, Battle Creek, MI 49015\n\nBaseline capture for redesign freeze proof.",
+  "smsConsent": true,
+  "businessSlug": "REPLACE_ME_SLUG",
+  "website": ""
+}
