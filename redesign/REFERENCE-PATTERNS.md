@@ -5,12 +5,38 @@
 | # | URL | Status |
 |---|---|---|
 | 1 | https://www.rodaspremierlandscaping.com | Analysed — full-page render + computed-style extraction |
-| 2 | `[ADD ANOTHER A&A-BUILT SITE URL]` | **Not supplied** — placeholder left unfilled in the brief |
-| 3 | `[OPTIONAL THIRD]` | **Not supplied** — optional |
+| 2 | https://www.fraazaenterprises.com | Analysed — full-page render + computed-style extraction |
+| 3 | `[THIRD URL]` | **Still not supplied** — placeholder unfilled |
 
-Everything below is extracted from source 1. Give me the other URLs and I'll
-widen the sample; one strong reference is enough to set the level, but two would
-let me separate house style from one-off choices.
+Two references is enough to separate house style from one-off choices, and doing
+so **changed a conclusion** — see §3.
+
+## Where the two references AGREE (house style — safe to adopt)
+
+| Pattern | Rodas | Fraaza |
+|---|---|---|
+| Serif display + sans body | EB Garamond + Inter | Playfair Display + DM Sans |
+| Eyebrow labels above section H2s | `WHAT WE DO`, `REVIEWS` | `WHAT WE DO`, `OUR WORK`, `WHY CHOOSE US` |
+| Pill CTAs (`border-radius: 9999px`) | yes | yes |
+| 16px card radius | yes | yes |
+| Sticky/fixed translucent header + `blur(12px)` | white 85% | near-black 90% |
+| Warm accent against a cool/dark ground | gold `#F0B524` | tan/bronze `#C8956C` |
+| Inline stat row in the hero | 5.0 / 9+ / Year-Round | 23+ Years / 5.0 Rating |
+| Location/credential pill above the H1 | "Serving Grand Rapids…" | "Owner-operated since 2004" |
+| One solid + one lighter CTA (not two heavy buttons) | solid gold + outlined | solid tan + text link with arrow |
+
+That agreement is the real house style. Everything in that table is adopted.
+
+## Where they DIVERGE (one-off choices — do not treat as law)
+
+| Dimension | Rodas | Fraaza |
+|---|---|---|
+| **Hero construction** | **Split** — content left on gradient, rounded photo card right, floating review card overlapping | **Full-bleed photo** with directional dark scrim, content left-aligned |
+| Overall ground | Light, white-led | Dark, near-black led |
+| Card construction | Photo above text, white card | Photo *is* the card, text overlaid on a scrim |
+| Section padding | 96px | 120px on hero, variable elsewhere |
+
+Because these disagree, neither is "the A&A way". The brief breaks the tie.
 
 What follows is **design language, not identity**. No colour, logo, or line of
 copy is carried over. Rodas is navy + gold; Brad's is green + a warm accent.
@@ -50,26 +76,38 @@ white → tint → white alternation. The current build uses a flatter, more uni
 are all Lexend — one family, no contrast. Pairing a serif display with the
 existing sans, plus eyebrows and an accent phrase, changes the whole register.
 
-## 3. Hero — split, not overlay
+## 3. Hero — CORRECTED after the second reference
 
-The most important structural difference from Brad's current build.
+**My first proposal (split hero) was wrong, and this section is where it broke.**
 
-- **Two columns**, not text-over-photo. Left: content on a deep navy gradient.
-  Right: a large photo in a **16px-radius rounded card**, inset from the edges.
-- A **floating testimonial card** overlaps the photo's bottom-left corner —
-  white, rounded, small stars, one short quote, attribution. This overlap is
-  what makes it read as designed rather than assembled.
-- Above the H1: a **location pill** — rounded-full, translucent, map-pin icon,
-  "Serving Grand Rapids & West Michigan".
-- Below the paragraph: **two pill CTAs** — solid accent primary with an arrow,
-  translucent/outlined secondary carrying the phone number.
-- Below the CTAs: an **inline stat row** — 3 items, accent-coloured value, tiny
-  grey label underneath.
-- Hero is roughly **900px tall** on desktop.
+With only Rodas in the sample I read "split hero" as the house pattern and
+proposed deviating from the brief's full-bleed instruction on that basis. Fraaza
+uses a **full-bleed photo hero with a dark overlay** — the same construction the
+brief specifies. One-for-one, so the references do not support the deviation.
+**Reverting to full-bleed.**
 
-**For Brad's:** the current hero is a dark overlay on a photo at 40% opacity —
-exactly the generic pattern. Moving to a split hero with a rounded photo card
-and an overlapping review card is the headline change of this redesign.
+The useful finding is that split-vs-full-bleed was never the real variable.
+Brad's current hero *is* already full-bleed-with-overlay and still looks
+generic. Comparing it against Fraaza's, which looks good, the differences are:
+
+| | Brad's current | Fraaza |
+|---|---|---|
+| Photo strength | `opacity-40` over near-black — muddy, washed out, the photo reads as texture | Near-full strength; it reads as a photograph of a real property |
+| Scrim | Flat wash across the entire image | **Directional gradient**, dark at left and bottom, clear at upper right |
+| H1 | Lexend sans, moderate size | **Serif display, large, tight leading**, 3 short lines |
+| Above H1 | Solid green pill | Translucent pill with a small dot — quieter, more premium |
+| CTAs | Two heavy competing buttons | **One solid pill + one text link with arrow** — clear hierarchy |
+| Below CTAs | Three inline meta items | **Stat row under a hairline rule** |
+| Header | Solid white bar | Translucent + `blur(12px)` over the photo |
+
+So the hero fix is: stronger photo, directional scrim instead of a flat wash,
+serif display H1, quieter eyebrow, one-primary CTA hierarchy, and a stat row on
+a hairline. All of that is achievable **inside** a full-bleed hero, with no
+structural deviation from the brief.
+
+Also adopted from Rodas, since it does not conflict: the **floating review
+card** can still overlap the bottom of the hero photo area as a single
+lower-right element, without splitting the layout.
 
 ## 4. Header
 
