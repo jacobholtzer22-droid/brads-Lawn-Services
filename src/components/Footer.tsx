@@ -25,7 +25,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5">
               {siteConfig.services.map((s) => (
                 <li key={s.slug}>
-                  <Link href={`/${s.slug}`} className="text-sm transition-colors hover:text-white">
+                  <Link href={`/${s.slug}`} className="inline-block py-1 text-sm transition-colors hover:text-white">
                     {s.name}
                   </Link>
                 </li>
@@ -40,7 +40,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5">
               {companyLinks.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-sm transition-colors hover:text-white">
+                  <Link href={l.href} className="inline-block py-1 text-sm transition-colors hover:text-white">
                     {l.label}
                   </Link>
                 </li>
@@ -106,7 +106,7 @@ export function Footer() {
                   href={siteConfig.social.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-brand-300 transition-colors hover:text-white"
+                  className="inline-block py-1 text-sm text-brand-300 transition-colors hover:text-white"
                 >
                   Facebook
                 </a>
@@ -116,7 +116,7 @@ export function Footer() {
                   href={siteConfig.social.homeAdvisor}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-brand-300 transition-colors hover:text-white"
+                  className="inline-block py-1 text-sm text-brand-300 transition-colors hover:text-white"
                 >
                   HomeAdvisor profile
                 </a>
@@ -126,7 +126,7 @@ export function Footer() {
                   href={siteConfig.social.googleReview}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-brand-300 transition-colors hover:text-white"
+                  className="inline-block py-1 text-sm text-brand-300 transition-colors hover:text-white"
                 >
                   Leave a Google review
                 </a>

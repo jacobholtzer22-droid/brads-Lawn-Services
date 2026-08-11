@@ -53,7 +53,11 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-content items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="flex flex-shrink-0 items-center" onClick={close}>
+        <Link
+          href="/"
+          className="flex min-h-[44px] flex-shrink-0 items-center"
+          onClick={close}
+        >
           {/*
             One logo file, two appearances. Over the dark hero the green
             wordmark is knocked out to white with a CSS filter rather than a

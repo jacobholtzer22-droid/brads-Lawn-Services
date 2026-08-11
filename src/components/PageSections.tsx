@@ -29,7 +29,7 @@ export function Breadcrumbs({ trail }: { trail: Crumb[] }) {
                     {crumb.name}
                   </span>
                 ) : (
-                  <Link href={crumb.href} className="transition-colors hover:text-brand-700">
+                  <Link href={crumb.href} className="inline-block py-1 transition-colors hover:text-brand-700">
                     {crumb.name}
                   </Link>
                 )}
