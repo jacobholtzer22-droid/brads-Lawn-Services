@@ -108,17 +108,17 @@ export function QuoteForm({ id = "quote-form" }: { id?: string }) {
     return (
       <div
         id={id}
-        className="rounded-xl border border-brand-200 bg-brand-50 p-8 text-center"
+        className="rounded-2xl border border-brand-200 bg-brand-50 p-8 text-center sm:p-10"
         role="status"
         aria-live="polite"
       >
         <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-brand-600">
           <CheckIcon className="h-6 w-6 text-white" />
         </span>
-        <h2 className="mt-5 text-xl font-bold text-slate-900">
+        <h2 className="mt-5 font-heading text-2xl font-bold text-ink">
           We got it — we&rsquo;ll call you shortly
         </h2>
-        <p className="mx-auto mt-3 max-w-md text-slate-700">
+        <p className="mx-auto mt-3 max-w-md text-ink-muted">
           Thanks for reaching out. We&rsquo;ll be in touch about your property
           soon. If you need us sooner, just call.
         </p>
@@ -134,7 +134,7 @@ export function QuoteForm({ id = "quote-form" }: { id?: string }) {
   }
 
   const inputClass =
-    "mt-1.5 block w-full min-h-[48px] rounded-lg border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/30";
+    "mt-1.5 block w-full min-h-[48px] rounded-xl border border-line bg-white px-4 py-3 text-base text-ink transition-colors placeholder:text-brand-300 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/25";
 
   return (
     <form
@@ -142,17 +142,17 @@ export function QuoteForm({ id = "quote-form" }: { id?: string }) {
       ref={formRef}
       onSubmit={handleSubmit}
       noValidate
-      className="rounded-xl border border-slate-200 bg-white p-6 sm:p-8"
+      className="card p-6 sm:p-8"
     >
-      <h2 className="text-xl font-bold text-slate-900">Request a free quote</h2>
-      <p className="mt-2 text-sm text-slate-600">
+      <h2 className="font-heading text-2xl font-bold text-ink">Request a free quote</h2>
+      <p className="mt-2 text-sm text-ink-muted">
         Fields marked <span aria-hidden="true">*</span>
         <span className="sr-only">with an asterisk</span> are required.
       </p>
 
       <div className="mt-6 grid gap-5 sm:grid-cols-2">
         <div className="sm:col-span-1">
-          <label htmlFor="qf-name" className="block text-sm font-semibold text-slate-900">
+          <label htmlFor="qf-name" className="block text-sm font-semibold text-ink">
             Your name <span aria-hidden="true" className="text-brand-700">*</span>
           </label>
           <input
@@ -174,7 +174,7 @@ export function QuoteForm({ id = "quote-form" }: { id?: string }) {
         </div>
 
         <div className="sm:col-span-1">
-          <label htmlFor="qf-phone" className="block text-sm font-semibold text-slate-900">
+          <label htmlFor="qf-phone" className="block text-sm font-semibold text-ink">
             Phone <span aria-hidden="true" className="text-brand-700">*</span>
           </label>
           <input
@@ -197,7 +197,7 @@ export function QuoteForm({ id = "quote-form" }: { id?: string }) {
         </div>
 
         <div className="sm:col-span-1">
-          <label htmlFor="qf-email" className="block text-sm font-semibold text-slate-900">
+          <label htmlFor="qf-email" className="block text-sm font-semibold text-ink">
             Email
           </label>
           <input
@@ -218,7 +218,7 @@ export function QuoteForm({ id = "quote-form" }: { id?: string }) {
         </div>
 
         <div className="sm:col-span-1">
-          <label htmlFor="qf-service" className="block text-sm font-semibold text-slate-900">
+          <label htmlFor="qf-service" className="block text-sm font-semibold text-ink">
             What do you need?
           </label>
           <select id="qf-service" name="service" defaultValue="" className={inputClass}>
@@ -232,7 +232,7 @@ export function QuoteForm({ id = "quote-form" }: { id?: string }) {
         </div>
 
         <div className="sm:col-span-2">
-          <label htmlFor="qf-address" className="block text-sm font-semibold text-slate-900">
+          <label htmlFor="qf-address" className="block text-sm font-semibold text-ink">
             Property address
           </label>
           <input
@@ -242,13 +242,13 @@ export function QuoteForm({ id = "quote-form" }: { id?: string }) {
             autoComplete="street-address"
             className={inputClass}
           />
-          <p className="mt-1.5 text-sm text-slate-500">
+          <p className="mt-1.5 text-sm text-ink-muted">
             Helps us size the job before we call you back.
           </p>
         </div>
 
         <div className="sm:col-span-2">
-          <label htmlFor="qf-details" className="block text-sm font-semibold text-slate-900">
+          <label htmlFor="qf-details" className="block text-sm font-semibold text-ink">
             Anything else we should know?
           </label>
           <textarea
@@ -286,15 +286,15 @@ export function QuoteForm({ id = "quote-form" }: { id?: string }) {
       )}
 
       {/* ---- SMS consent ---- */}
-      <div className="mt-6 rounded-lg border border-slate-200 bg-slate-50 p-4">
+      <div className="mt-6 rounded-xl border border-line bg-surface-tint p-4">
         <label htmlFor="qf-sms" className="flex cursor-pointer items-start gap-3">
           <input
             id="qf-sms"
             name="smsConsent"
             type="checkbox"
-            className="mt-0.5 h-5 w-5 flex-shrink-0 cursor-pointer rounded border-slate-400 text-brand-600 focus:ring-2 focus:ring-brand-600/40"
+            className="mt-0.5 h-5 w-5 flex-shrink-0 cursor-pointer rounded border-line text-brand-600 focus:ring-2 focus:ring-brand-600/40"
           />
-          <span className="text-sm leading-relaxed text-slate-700">
+          <span className="text-sm leading-relaxed text-ink-muted">
             Text me about my request. By checking this box you agree to receive
             text messages from {siteConfig.name} about the quote you asked for.
             Message and data rates may apply. Message frequency varies. Reply
@@ -306,7 +306,7 @@ export function QuoteForm({ id = "quote-form" }: { id?: string }) {
       {status === "error" && (
         <div
           role="alert"
-          className="mt-6 rounded-lg border border-red-200 bg-red-50 p-4"
+          className="mt-6 rounded-xl border border-red-200 bg-red-50 p-4"
         >
           <p className="font-semibold text-red-900">
             Something went wrong sending that.
@@ -332,7 +332,7 @@ export function QuoteForm({ id = "quote-form" }: { id?: string }) {
         {status === "submitting" ? "Sending..." : "Send my request"}
       </button>
 
-      <p className="mt-4 text-center text-sm text-slate-500">
+      <p className="mt-4 text-center text-sm text-ink-muted">
         Prefer to talk? Call{" "}
         <a
           href={siteConfig.phone.tel}

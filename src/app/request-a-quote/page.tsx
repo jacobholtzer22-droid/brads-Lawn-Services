@@ -44,13 +44,13 @@ export default function RequestAQuotePage() {
         ]}
       />
 
-      <section className="py-16 sm:py-20">
+      <section className="band">
         <div className="section">
           <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
             <div className="lg:col-span-3">
               <QuoteForm />
 
-              <h2 className="mt-14 text-2xl font-bold text-slate-900">
+              <h2 className="display-2 mt-14 text-ink">
                 What we will ask you
               </h2>
               <ul className="mt-6 space-y-3">
@@ -61,18 +61,18 @@ export default function RequestAQuotePage() {
                   "The best number to reach you at",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-50">
+                    <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md bg-brand-100">
                       <CheckIcon className="h-4 w-4 text-brand-700" />
                     </span>
-                    <span className="text-slate-700">{item}</span>
+                    <span className="text-ink-muted">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <aside className="lg:col-span-2">
-              <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
-                <h2 className="text-lg font-bold text-slate-900">
+              <div className="rounded-2xl border border-line bg-surface-tint p-6">
+                <h2 className="text-lg font-bold text-ink">
                   Rather just call?
                 </h2>
                 <a
@@ -84,17 +84,17 @@ export default function RequestAQuotePage() {
                   {siteConfig.phone.display}
                 </a>
 
-                <ul className="mt-6 space-y-4 border-t border-slate-200 pt-6 text-sm">
+                <ul className="mt-6 space-y-4 border-t border-line pt-6 text-sm">
                   <li className="flex items-start gap-3">
                     <ClockIcon className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-700" />
-                    <span className="text-slate-700">{siteConfig.hours}</span>
+                    <span className="text-ink-muted">{siteConfig.hours}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <MapPinIcon className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-700" />
-                    <span className="text-slate-700">
+                    <span className="text-ink-muted">
                       {siteConfig.serviceArea.description}
                       <br />
-                      <span className="text-slate-500">
+                      <span className="text-ink-muted">
                         ZIP codes {siteConfig.serviceArea.zips.join(", ")}
                       </span>
                     </span>

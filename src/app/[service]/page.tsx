@@ -129,26 +129,26 @@ export default async function ServicePage({ params }: Props) {
       />
 
       {/* ---------- INTRO + WHAT'S INCLUDED ---------- */}
-      <section className="py-16 sm:py-20">
+      <section className="band">
         <div className="section">
           <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
             <div className="lg:col-span-3">
               {service.intro2 && (
-                <p className="text-lg leading-relaxed text-slate-700">
+                <p className="text-lg leading-relaxed text-ink-muted">
                   {service.intro2}
                 </p>
               )}
 
-              <h2 className="mt-10 text-2xl font-bold text-slate-900 sm:text-3xl">
+              <h2 className="display-2 mt-10 text-ink">
                 {service.includedHeading}
               </h2>
               <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                 {service.included.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-50">
+                    <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md bg-brand-100">
                       <CheckIcon className="h-4 w-4 text-brand-700" />
                     </span>
-                    <span className="text-slate-700">{item}</span>
+                    <span className="text-ink-muted">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -156,11 +156,11 @@ export default async function ServicePage({ params }: Props) {
 
             {/* Sidebar CTA */}
             <aside className="lg:col-span-2">
-              <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
-                <h2 className="text-lg font-bold text-slate-900">
+              <div className="rounded-2xl border border-line bg-surface-tint p-6">
+                <h2 className="text-lg font-bold text-ink">
                   Get a quote for {service.name.toLowerCase()}
                 </h2>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <p className="mt-2 text-sm leading-relaxed text-ink-muted">
                   Tell us about your property and we will give you a real price.
                   We answer the phone {siteConfig.availability.toLowerCase()}.
                 </p>
@@ -178,7 +178,7 @@ export default async function ServicePage({ params }: Props) {
                 >
                   Request a free quote
                 </Link>
-                <p className="mt-4 border-t border-slate-200 pt-4 text-xs text-slate-500">
+                <p className="mt-4 border-t border-line pt-4 text-xs text-ink-muted">
                   Serving {siteConfig.serviceArea.description} &middot; ZIP codes{" "}
                   {siteConfig.serviceArea.zips.join(", ")}
                 </p>
@@ -190,19 +190,19 @@ export default async function ServicePage({ params }: Props) {
 
       {/* ---------- BENEFITS ---------- */}
       {service.benefits && (
-        <section className="border-y border-slate-200 bg-slate-50 py-16 sm:py-20">
+        <section className="band border-y border-line bg-surface-tint">
           <div className="section">
             <Reveal>
-              <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+              <h2 className="display-2 text-ink">
                 {service.benefits.heading}
               </h2>
             </Reveal>
             <ul className="mt-10 grid gap-6 sm:grid-cols-3">
               {service.benefits.items.map((b, i) => (
                 <Reveal as="li" key={b.title} delay={i * 70}>
-                  <div className="h-full rounded-xl border border-slate-200 bg-white p-6">
-                    <h3 className="font-semibold text-slate-900">{b.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  <div className="card h-full p-6">
+                    <h3 className="font-semibold text-ink">{b.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-muted">
                       {b.body}
                     </p>
                   </div>
@@ -215,17 +215,17 @@ export default async function ServicePage({ params }: Props) {
 
       {/* ---------- PHOTOS ---------- */}
       {bodyImages.length > 0 && (
-        <section className="py-16 sm:py-20">
+        <section className="band">
           <div className="section">
             <Reveal>
-              <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+              <h2 className="display-2 text-ink">
                 {service.name} in the {siteConfig.location.city} area
               </h2>
             </Reveal>
             <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {bodyImages.map((img, i) => (
                 <Reveal as="li" key={img.src} delay={i * 60}>
-                  <figure className="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100">
+                  <figure className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-brand-50">
                     <Image
                       src={img.src}
                       alt={img.alt}
@@ -243,10 +243,10 @@ export default async function ServicePage({ params }: Props) {
       )}
 
       {/* ---------- HOW IT WORKS ---------- */}
-      <section className="border-t border-slate-200 py-16 sm:py-20">
+      <section className="band border-t border-line">
         <div className="section">
           <Reveal>
-            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+            <h2 className="display-2 text-ink">
               How it works
             </h2>
           </Reveal>
@@ -256,10 +256,10 @@ export default async function ServicePage({ params }: Props) {
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">
                   {i + 1}
                 </span>
-                <h3 className="mt-4 font-semibold text-slate-900">
+                <h3 className="mt-4 font-semibold text-ink">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <p className="mt-2 text-sm leading-relaxed text-ink-muted">
                   {step.body}
                 </p>
               </Reveal>

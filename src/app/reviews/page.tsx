@@ -53,14 +53,14 @@ export default function ReviewsPage() {
       />
 
       {/* ---------- LEAVE A REVIEW ---------- */}
-      <section className="border-b border-slate-200 bg-slate-50 py-10">
+      <section className="band-tight border-b border-line bg-surface-tint">
         <div className="section">
           <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
             <div>
-              <h2 className="text-xl font-bold text-slate-900">
+              <h2 className="text-xl font-bold text-ink">
                 Worked with us? Tell people how it went.
               </h2>
-              <p className="mt-1.5 text-slate-600">
+              <p className="mt-1.5 text-ink-muted">
                 A review on Google helps your neighbors find us.
               </p>
             </div>
@@ -78,25 +78,25 @@ export default function ReviewsPage() {
       </section>
 
       {/* ---------- ALL REVIEWS ---------- */}
-      <section className="py-16 sm:py-20">
+      <section className="band">
         <div className="section">
           <h2 className="sr-only">All customer reviews</h2>
           <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {reviews.map((review, i) => (
               <Reveal as="li" key={review.name} delay={(i % 3) * 60}>
-                <figure className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-6">
-                  <div className="flex gap-0.5 text-amber-500" aria-hidden="true">
+                <figure className="card flex h-full flex-col p-6">
+                  <div className="flex gap-0.5 text-accent-600" aria-hidden="true">
                     {Array.from({ length: 5 }).map((_, s) => (
                       <StarIcon key={s} className="h-5 w-5" />
                     ))}
                   </div>
                   <span className="sr-only">Five out of five stars</span>
                   <blockquote className="mt-4 flex-1">
-                    <p className="leading-relaxed text-slate-700">
+                    <p className="leading-relaxed text-ink-muted">
                       &ldquo;{review.text}&rdquo;
                     </p>
                   </blockquote>
-                  <figcaption className="mt-5 border-t border-slate-100 pt-4 text-sm font-semibold text-slate-900">
+                  <figcaption className="mt-5 border-t border-line pt-4 text-sm font-semibold text-ink">
                     {review.name}
                   </figcaption>
                 </figure>
@@ -107,7 +107,7 @@ export default function ReviewsPage() {
       </section>
 
       {/* ---------- GOOGLE BADGE ---------- */}
-      <section className="border-t border-slate-200 py-14">
+      <section className="band-tight border-t border-line">
         <div className="section flex flex-col items-center gap-6 text-center">
           <a
             href={siteConfig.social.googleReview}
@@ -124,7 +124,7 @@ export default function ReviewsPage() {
               className="h-auto w-[240px] object-contain"
             />
           </a>
-          <p className="max-w-xl text-slate-600">
+          <p className="max-w-xl text-ink-muted">
             You can also see our profile and ratings on{" "}
             <a
               href={siteConfig.social.homeAdvisor}

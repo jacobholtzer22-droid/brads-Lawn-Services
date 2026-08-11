@@ -43,7 +43,7 @@ export default function GalleryPage() {
         ]}
       />
 
-      <section className="py-16 sm:py-20">
+      <section className="band">
         <div className="section">
           <h2 className="sr-only">Gallery images</h2>
           <GalleryGrid />

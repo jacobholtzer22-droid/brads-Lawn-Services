@@ -46,45 +46,45 @@ export default function AreasWeServePage() {
       />
 
       {/* ---------- CRAWLABLE SERVICE AREA TEXT ---------- */}
-      <section className="py-16 sm:py-20">
+      <section className="band">
         <div className="section">
           <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
             <div className="lg:col-span-3">
-              <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+              <h2 className="display-2 text-ink">
                 Where we work
               </h2>
-              <p className="mt-5 text-lg leading-relaxed text-slate-700">
+              <p className="mt-5 text-lg leading-relaxed text-ink-muted">
                 Our home base is {siteConfig.location.city}, Michigan, and that is
                 where the bulk of our work is. We also serve the surrounding
                 communities around {siteConfig.location.city} for mowing, brush
                 hogging, core aeration, leaf cleanup, and commercial snow and ice
                 management.
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-slate-700">
+              <p className="mt-4 text-lg leading-relaxed text-ink-muted">
                 If your property sits just outside the ZIP codes below, that does
                 not automatically mean no. Give us a call with your address and we
                 will tell you straight whether we can get to you.
               </p>
 
-              <h3 className="mt-10 text-lg font-semibold text-slate-900">
+              <h3 className="mt-10 text-lg font-semibold text-ink">
                 ZIP codes we serve
               </h3>
               <ul className="mt-4 grid gap-3 sm:grid-cols-2">
                 {siteConfig.serviceArea.zips.map((zip) => (
                   <li
                     key={zip}
-                    className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
+                    className="flex items-center gap-3 rounded-lg border border-line bg-white px-4 py-3"
                   >
                     <MapPinIcon className="h-5 w-5 flex-shrink-0 text-brand-600" />
-                    <span className="font-medium text-slate-900">{zip}</span>
-                    <span className="text-sm text-slate-500">
+                    <span className="font-medium text-ink">{zip}</span>
+                    <span className="text-sm text-ink-muted">
                       {siteConfig.location.city}, {siteConfig.location.state}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <h3 className="mt-10 text-lg font-semibold text-slate-900">
+              <h3 className="mt-10 text-lg font-semibold text-ink">
                 What we do in the area
               </h3>
               <ul className="mt-4 grid gap-2 sm:grid-cols-2">
@@ -103,11 +103,11 @@ export default function AreasWeServePage() {
             </div>
 
             <aside className="lg:col-span-2">
-              <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
-                <h2 className="text-lg font-bold text-slate-900">
+              <div className="rounded-2xl border border-line bg-surface-tint p-6">
+                <h2 className="text-lg font-bold text-ink">
                   Not sure if we reach you?
                 </h2>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <p className="mt-2 text-sm leading-relaxed text-ink-muted">
                   Call with your address. Our listed hours are{" "}
                   {siteConfig.hours.toLowerCase()}, so reach out whenever works.
                 </p>
@@ -129,18 +129,18 @@ export default function AreasWeServePage() {
       </section>
 
       {/* ---------- MAP (secondary content) ---------- */}
-      <section className="border-t border-slate-200 bg-slate-50 py-16">
+      <section className="band border-t border-line bg-surface-tint">
         <div className="section">
           <Reveal>
-            <h2 className="text-2xl font-bold text-slate-900">
+            <h2 className="text-2xl font-bold text-ink">
               {siteConfig.location.city} on the map
             </h2>
-            <p className="mt-3 text-slate-600">
+            <p className="mt-3 text-ink-muted">
               A rough view of our home base. The text above is the authoritative
               description of our service area.
             </p>
           </Reveal>
-          <div className="mt-7 overflow-hidden rounded-xl border border-slate-200">
+          <div className="mt-7 overflow-hidden rounded-2xl border border-line">
             <iframe
               title={`Map of ${siteConfig.location.city}, ${siteConfig.location.stateFull}`}
               src="https://www.google.com/maps?q=Battle+Creek,+MI&output=embed"

@@ -50,38 +50,38 @@ export default function EmploymentPage() {
         ]}
       />
 
-      <section className="py-16 sm:py-20">
+      <section className="band">
         <div className="section">
           <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
             <div className="lg:col-span-3">
-              <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+              <h2 className="display-2 text-ink">
                 What we look for
               </h2>
-              <p className="mt-5 text-lg leading-relaxed text-slate-700">
+              <p className="mt-5 text-lg leading-relaxed text-ink-muted">
                 We are a family business that has been working in Battle Creek
                 since {siteConfig.sinceYear}. The work is outdoors and hands-on:
                 mowing and trimming through the season, brush hogging and
                 cleanups, and snow and ice work through the winter.
               </p>
 
-              <h3 className="mt-10 text-lg font-semibold text-slate-900">
+              <h3 className="mt-10 text-lg font-semibold text-ink">
                 Requirements
               </h3>
               <ul className="mt-4 space-y-3">
                 {requirements.map((r) => (
                   <li key={r} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-50">
+                    <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md bg-brand-100">
                       <CheckIcon className="h-4 w-4 text-brand-700" />
                     </span>
-                    <span className="text-slate-700">{r}</span>
+                    <span className="text-ink-muted">{r}</span>
                   </li>
                 ))}
               </ul>
 
-              <h3 className="mt-10 text-lg font-semibold text-slate-900">
+              <h3 className="mt-10 text-lg font-semibold text-ink">
                 How to apply
               </h3>
-              <p className="mt-4 text-lg leading-relaxed text-slate-700">
+              <p className="mt-4 text-lg leading-relaxed text-ink-muted">
                 Call or text us at{" "}
                 <a
                   href={siteConfig.phone.tel}
@@ -102,8 +102,8 @@ export default function EmploymentPage() {
             </div>
 
             <aside className="lg:col-span-2">
-              <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
-                <h2 className="text-lg font-bold text-slate-900">
+              <div className="rounded-2xl border border-line bg-surface-tint p-6">
+                <h2 className="text-lg font-bold text-ink">
                   Get in touch
                 </h2>
                 <a
@@ -121,7 +121,7 @@ export default function EmploymentPage() {
                   <MailIcon className="mr-2 h-5 w-5" />
                   Email us
                 </a>
-                <p className="mt-4 border-t border-slate-200 pt-4 text-xs text-slate-500">
+                <p className="mt-4 border-t border-line pt-4 text-xs text-ink-muted">
                   {siteConfig.hours}
                 </p>
               </div>

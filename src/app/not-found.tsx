@@ -10,15 +10,15 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="band">
       <div className="section text-center">
         <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">
           404
         </p>
-        <h1 className="mt-3 text-display-sm font-bold text-slate-900 sm:text-display-md">
+        <h1 className="mt-3 text-display-sm font-bold text-ink sm:text-display-md">
           We couldn&rsquo;t find that page
         </h1>
-        <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-slate-600">
+        <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-ink-muted">
           The page may have moved or the link may be out of date. You can still
           reach us the fastest way there is — pick up the phone.
         </p>
@@ -37,8 +37,8 @@ export default function NotFound() {
           </Link>
         </div>
 
-        <div className="mx-auto mt-14 max-w-2xl border-t border-slate-200 pt-10">
-          <h2 className="text-lg font-semibold text-slate-900">
+        <div className="mx-auto mt-14 max-w-2xl border-t border-line pt-10">
+          <h2 className="text-lg font-semibold text-ink">
             Looking for one of these?
           </h2>
           <ul className="mt-5 grid gap-2 sm:grid-cols-2">

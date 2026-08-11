@@ -69,17 +69,17 @@ export default function AboutPage() {
       />
 
       {/* ---------- OUR BEGINNING ---------- */}
-      <section className="py-16 sm:py-20">
+      <section className="band">
         <div className="section">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
             <Reveal>
-              <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+              <h2 className="display-2 text-ink">
                 Our beginning
               </h2>
-              <p className="mt-5 text-lg leading-relaxed text-slate-700">
+              <p className="mt-5 text-lg leading-relaxed text-ink-muted">
                 {siteConfig.about.origin}
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-slate-700">
+              <p className="mt-4 text-lg leading-relaxed text-ink-muted">
                 That has meant {yearsServing} years of showing up in {siteConfig.location.city}
                 {" "}and the surrounding areas, on lawns of every size and shape.
                 Every property is different, so we build the work around what
@@ -87,7 +87,7 @@ export default function AboutPage() {
               </p>
             </Reveal>
 
-            <Reveal className="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100">
+            <Reveal className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-brand-50">
               <Image
                 src={images.heroLawn.src}
                 alt={images.heroLawn.alt}
@@ -101,16 +101,16 @@ export default function AboutPage() {
       </section>
 
       {/* ---------- THE MOTTO ---------- */}
-      <section className="border-y border-slate-200 bg-slate-50 py-16 sm:py-20">
+      <section className="band border-y border-line bg-surface-tint">
         <div className="section">
           <Reveal className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">
               Our motto
             </p>
-            <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-bold text-ink sm:text-4xl">
               What &ldquo;{siteConfig.motto}&rdquo; actually means
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-slate-600">
+            <p className="mt-5 text-lg leading-relaxed text-ink-muted">
               It is not just a tagline. It breaks down into three things we hold
               ourselves to on every property.
             </p>
@@ -119,14 +119,14 @@ export default function AboutPage() {
           <ul className="mt-12 grid gap-6 lg:grid-cols-3">
             {pillars.map((p, i) => (
               <Reveal as="li" key={p.title} delay={i * 70}>
-                <div className="h-full rounded-xl border border-slate-200 bg-white p-7">
+                <div className="card h-full p-7">
                   <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600">
                     <CheckIcon className="h-5 w-5 text-white" />
                   </span>
-                  <h3 className="mt-5 text-lg font-semibold text-slate-900">
+                  <h3 className="mt-5 text-lg font-semibold text-ink">
                     {p.title}
                   </h3>
-                  <p className="mt-2.5 leading-relaxed text-slate-600">
+                  <p className="mt-2.5 leading-relaxed text-ink-muted">
                     {p.body}
                   </p>
                 </div>
@@ -137,10 +137,10 @@ export default function AboutPage() {
       </section>
 
       {/* ---------- WHO WE WORK FOR ---------- */}
-      <section className="py-16 sm:py-20">
+      <section className="band">
         <div className="section">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-            <Reveal className="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100 lg:order-2">
+            <Reveal className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-brand-50 lg:order-2">
               <Image
                 src={images.brushHogging2.src}
                 alt={images.brushHogging2.alt}
@@ -152,16 +152,16 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal className="lg:order-1">
-              <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+              <h2 className="display-2 text-ink">
                 Homes and businesses alike
               </h2>
-              <p className="mt-5 text-lg leading-relaxed text-slate-700">
+              <p className="mt-5 text-lg leading-relaxed text-ink-muted">
                 We serve both residential and commercial properties. That ranges
                 from a weekly cut on a single-family lawn to commercial grounds
                 maintenance, brush hogging on overgrown lots, and winter snow and
                 ice work for retail, light industrial, and multi-family sites.
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-slate-700">
+              <p className="mt-4 text-lg leading-relaxed text-ink-muted">
                 Our listed hours are {siteConfig.hours.toLowerCase()}, so you can
                 reach us when it works for you.
               </p>
@@ -171,9 +171,9 @@ export default function AboutPage() {
       </section>
 
       {/* ---------- BADGES ---------- */}
-      <section className="border-t border-slate-200 py-14">
+      <section className="band-tight border-t border-line">
         <div className="section text-center">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-600">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">
             Screened, approved, and rated
           </h2>
           <div className="mt-7 flex justify-center">

@@ -51,14 +51,14 @@ export default function ContactPage() {
         ]}
       />
 
-      <section className="py-16 sm:py-20">
+      <section className="band">
         <div className="section">
           <div className="grid gap-10 lg:grid-cols-3">
-            <div className="rounded-xl border border-slate-200 bg-white p-7">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-50">
+            <div className="card p-7">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100">
                 <PhoneIcon className="h-5 w-5 text-brand-700" />
               </span>
-              <h2 className="mt-5 text-lg font-bold text-slate-900">Call or text</h2>
+              <h2 className="mt-5 text-lg font-bold text-ink">Call or text</h2>
               <a
                 href={siteConfig.phone.tel}
                 data-tel-cta
@@ -66,51 +66,51 @@ export default function ContactPage() {
               >
                 {siteConfig.phone.display}
               </a>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+              <p className="mt-3 text-sm leading-relaxed text-ink-muted">
                 Quickest way to get a quote. Tell us your address and what the
                 property needs.
               </p>
             </div>
 
-            <div className="rounded-xl border border-slate-200 bg-white p-7">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-50">
+            <div className="card p-7">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100">
                 <MailIcon className="h-5 w-5 text-brand-700" />
               </span>
-              <h2 className="mt-5 text-lg font-bold text-slate-900">Email</h2>
+              <h2 className="mt-5 text-lg font-bold text-ink">Email</h2>
               <a
                 href={`mailto:${siteConfig.email}`}
                 className="mt-2 block break-all font-semibold text-brand-700 hover:text-brand-800"
               >
                 {siteConfig.email}
               </a>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+              <p className="mt-3 text-sm leading-relaxed text-ink-muted">
                 Good for details, photos of the property, or anything that is not
                 urgent.
               </p>
             </div>
 
-            <div className="rounded-xl border border-slate-200 bg-white p-7">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-50">
+            <div className="card p-7">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100">
                 <ClockIcon className="h-5 w-5 text-brand-700" />
               </span>
-              <h2 className="mt-5 text-lg font-bold text-slate-900">Hours</h2>
-              <p className="mt-2 font-semibold text-slate-900">
+              <h2 className="mt-5 text-lg font-bold text-ink">Hours</h2>
+              <p className="mt-2 font-semibold text-ink">
                 {siteConfig.hours}
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+              <p className="mt-3 text-sm leading-relaxed text-ink-muted">
                 {siteConfig.availability}.
               </p>
             </div>
           </div>
 
           {/* ---------- SERVICE AREA + MAILING ---------- */}
-          <div className="mt-12 grid gap-10 rounded-xl border border-slate-200 bg-slate-50 p-8 lg:grid-cols-2">
+          <div className="mt-12 grid gap-10 rounded-2xl border border-line bg-surface-tint p-8 lg:grid-cols-2">
             <div>
-              <h2 className="flex items-center gap-2 text-lg font-bold text-slate-900">
+              <h2 className="flex items-center gap-2 text-lg font-bold text-ink">
                 <MapPinIcon className="h-5 w-5 text-brand-700" />
                 Service area
               </h2>
-              <p className="mt-3 leading-relaxed text-slate-700">
+              <p className="mt-3 leading-relaxed text-ink-muted">
                 {siteConfig.serviceArea.description}, covering ZIP codes{" "}
                 {siteConfig.serviceArea.zips.join(", ")}. If you are not sure
                 whether we reach your street, call and ask.
@@ -125,14 +125,14 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-bold text-slate-900">Mailing address</h2>
-              <p className="mt-3 leading-relaxed text-slate-700">
+              <h2 className="text-lg font-bold text-ink">Mailing address</h2>
+              <p className="mt-3 leading-relaxed text-ink-muted">
                 {siteConfig.location.poBox}
                 <br />
                 {siteConfig.location.city}, {siteConfig.location.state}{" "}
                 {siteConfig.location.zip}
               </p>
-              <p className="mt-3 text-sm text-slate-500">
+              <p className="mt-3 text-sm text-ink-muted">
                 We are a service-area business — we come to your property rather
                 than working from a storefront.
               </p>
@@ -145,7 +145,7 @@ export default function ContactPage() {
               <QuoteForm />
             </div>
             <div className="lg:col-span-2">
-              <div className="rounded-xl bg-brand-600 p-7">
+              <div className="rounded-2xl bg-brand-600 p-7">
                 <h2 className="text-xl font-bold text-white">
                   Rather just call?
                 </h2>
@@ -156,7 +156,7 @@ export default function ContactPage() {
                 <a
                   href={siteConfig.phone.tel}
                   data-tel-cta
-                  className="mt-6 inline-flex min-h-[44px] w-full items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-700 transition-colors hover:bg-brand-50"
+                  className="btn mt-6 w-full bg-white text-brand-700 hover:-translate-y-px hover:bg-brand-50"
                 >
                   <PhoneIcon className="mr-2 h-5 w-5" />
                   {siteConfig.phone.display}
