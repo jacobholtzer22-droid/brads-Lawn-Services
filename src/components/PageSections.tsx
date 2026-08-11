@@ -12,24 +12,24 @@ export type Crumb = { name: string; href: string };
 
 export function Breadcrumbs({ trail }: { trail: Crumb[] }) {
   return (
-    <nav aria-label="Breadcrumb" className="border-b border-slate-200 bg-slate-50">
+    <nav aria-label="Breadcrumb" className="border-b border-line bg-surface-tint">
       <div className="section">
-        <ol className="flex flex-wrap items-center gap-1.5 py-3 text-sm text-slate-600">
+        <ol className="flex flex-wrap items-center gap-1.5 py-3.5 text-sm text-ink-muted">
           {trail.map((crumb, i) => {
             const last = i === trail.length - 1;
             return (
               <li key={crumb.href} className="flex items-center gap-1.5">
                 {i > 0 && (
                   <ChevronRightIcon
-                    className="h-4 w-4 flex-shrink-0 text-slate-400"
+                    className="h-4 w-4 flex-shrink-0 text-brand-300"
                   />
                 )}
                 {last ? (
-                  <span aria-current="page" className="font-medium text-slate-900">
+                  <span aria-current="page" className="font-semibold text-ink">
                     {crumb.name}
                   </span>
                 ) : (
-                  <Link href={crumb.href} className="hover:text-brand-700">
+                  <Link href={crumb.href} className="transition-colors hover:text-brand-700">
                     {crumb.name}
                   </Link>
                 )}
@@ -46,6 +46,11 @@ export function Breadcrumbs({ trail }: { trail: Crumb[] }) {
 /* Inner-page hero                                                     */
 /* ------------------------------------------------------------------ */
 
+/**
+ * Inner-page hero. Same construction as the homepage hero — full-bleed photo
+ * with a directional scrim — just shorter. The photo runs at full strength
+ * rather than the old opacity-35 wash, so it reads as a photograph.
+ */
 export function PageHero({
   title,
   intro,
@@ -60,29 +65,51 @@ export function PageHero({
   const img = imageSlot ? images[imageSlot] : null;
 
   return (
-    <section className="relative isolate overflow-hidden bg-slate-900">
+    <section className="relative isolate overflow-hidden bg-brand-950">
       {img && (
-        <Image
-          src={img.src}
-          alt={img.alt}
-          fill
-          priority
-          sizes="100vw"
-          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-35"
-        />
+        <>
+          <Image
+            src={img.src}
+            alt={img.alt}
+            fill
+            priority
+            sizes="100vw"
+            className="absolute inset-0 -z-20 h-full w-full object-cover object-[60%_center]"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 bg-gradient-to-r from-brand-950 via-brand-950/85 to-brand-950/30"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 bg-gradient-to-t from-brand-950/90 via-transparent to-brand-950/50"
+          />
+        </>
       )}
-      <div className="section py-16 sm:py-20 lg:py-24">
+      <div className="section pb-14 pt-28 sm:pb-16 sm:pt-32 lg:pb-20 lg:pt-36">
         <div className="max-w-3xl">
           {eyebrow && (
-            <p className="text-sm font-semibold uppercase tracking-wide text-brand-300">
+            <p className="pill-light hero-in">
+              <span
+                aria-hidden="true"
+                className="h-1.5 w-1.5 rounded-full bg-accent-400"
+              />
               {eyebrow}
             </p>
           )}
-          <h1 className="mt-3 text-display-sm font-bold text-white sm:text-display-md">
+          <h1
+            className="display-1 hero-in mt-6 text-white"
+            style={{ animationDelay: "80ms" }}
+          >
             {title}
           </h1>
           {intro && (
-            <p className="mt-5 text-lg leading-relaxed text-slate-200">{intro}</p>
+            <p
+              className="hero-in mt-6 text-lg leading-relaxed text-brand-100"
+              style={{ animationDelay: "160ms" }}
+            >
+              {intro}
+            </p>
           )}
         </div>
       </div>
@@ -102,25 +129,36 @@ export function CTASection({
   body?: string;
 }) {
   return (
-    <section className="bg-brand-600 py-16 sm:py-20">
-      <div className="section text-center">
-        <h2 className="text-3xl font-bold text-white sm:text-4xl">{heading}</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-brand-50">{body}</p>
-        <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+    <section className="relative isolate overflow-hidden bg-brand-950">
+      {/* Faint photographic wash, per the reference CTA-band pattern. */}
+      <Image
+        src={images.heroLawn.src}
+        alt=""
+        aria-hidden="true"
+        fill
+        loading="lazy"
+        sizes="100vw"
+        className="absolute inset-0 -z-10 h-full w-full object-cover opacity-15"
+      />
+      <div className="section band text-center">
+        <p className="eyebrow text-accent-500">Ready when you are</p>
+        <h2 className="display-2 mx-auto mt-3 max-w-3xl text-white">{heading}</h2>
+        <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-brand-200">
+          {body}
+        </p>
+        <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Link href="/request-a-quote" className="btn-accent w-full sm:w-auto">
+            Request a free quote
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
           <a
             href={siteConfig.phone.tel}
             data-tel-cta
-            className="inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-700 transition-colors hover:bg-brand-50"
+            className="btn-ghost-light w-full sm:w-auto"
           >
             <PhoneIcon className="mr-2 h-5 w-5" />
             {siteConfig.phone.display}
           </a>
-          <Link
-            href="/request-a-quote"
-            className="inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-lg border-2 border-white px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-700"
-          >
-            Request a free quote
-          </Link>
         </div>
       </div>
     </section>
@@ -182,25 +220,23 @@ export function RelatedServices({ slugs }: { slugs: string[] }) {
   if (!related.length) return null;
 
   return (
-    <section className="border-t border-slate-200 py-16">
+    <section className="band border-t border-line">
       <div className="section">
-        <h2 className="text-2xl font-bold text-slate-900">
-          Other services we offer
-        </h2>
+        <h2 className="display-2 text-ink">Other services we offer</h2>
         <ul className="mt-8 grid gap-4 sm:grid-cols-3">
           {related.map((s) => (
             <li key={s.slug}>
               <Link
                 href={`/${s.slug}`}
-                className="group flex h-full flex-col rounded-xl border border-slate-200 p-5 transition-colors hover:border-brand-600"
+                className="group card-interactive flex h-full flex-col p-6"
               >
-                <h3 className="font-semibold text-slate-900">{s.name}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+                <h3 className="font-semibold text-ink">{s.name}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted">
                   {s.shortDescription}
                 </p>
                 <span className="mt-3 inline-flex items-center text-sm font-semibold text-brand-700">
                   Learn more
-                  <ArrowRightIcon className="ml-1.5 h-4 w-4" />
+                  <ArrowRightIcon className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </span>
               </Link>
             </li>

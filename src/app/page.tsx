@@ -25,6 +25,7 @@ import {
   StarIcon,
 } from "@/components/Icons";
 
+/* METADATA IS FROZEN — do not edit. See redesign/BASELINE-SEO.txt. */
 export const metadata: Metadata = {
   title: {
     absolute: `${siteConfig.name} | Lawn Care in ${siteConfig.location.city}, ${siteConfig.location.state}`,
@@ -51,6 +52,9 @@ const featuredReviews = [
   reviews[10],
 ] as const;
 
+/** Short enough to sit in the hero's floating card without truncation. */
+const heroReview = reviews[11];
+
 const edgePillars = [
   { title: "Service", body: siteConfig.about.mottoMeaning.service },
   { title: "A Sharp Edge", body: siteConfig.about.mottoMeaning.edge },
@@ -60,6 +64,7 @@ const edgePillars = [
 export default function HomePage() {
   const yearsServing = new Date().getFullYear() - siteConfig.sinceYear;
 
+  /* JSON-LD IS FROZEN — do not edit. */
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -93,132 +98,178 @@ export default function HomePage() {
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
 
-      {/* ---------- HERO ---------- */}
-      <section className="relative isolate overflow-hidden bg-slate-900">
+      {/* ================= HERO =================
+          Full-bleed photo with a DIRECTIONAL scrim (dark lower-left, clearing
+          toward upper right) rather than a flat wash, so the photograph still
+          reads as a photograph. See redesign/REFERENCE-PATTERNS.md §3. */}
+      <section className="relative isolate min-h-[640px] overflow-hidden bg-brand-950 lg:min-h-[760px]">
         <Image
           src={images.heroLawn.src}
           alt={images.heroLawn.alt}
           fill
           priority
           sizes="100vw"
-          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-[60%_center]"
         />
-        <div className="section py-20 sm:py-28 lg:py-36">
+        {/* Directional scrim: solid enough at the text for AA, clear at right. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-gradient-to-r from-brand-950 via-brand-950/85 to-brand-950/25"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-gradient-to-t from-brand-950 via-transparent to-brand-950/40"
+        />
+
+        <div className="section flex min-h-[640px] flex-col justify-center pb-14 pt-28 sm:pt-32 lg:min-h-[760px] lg:pb-20">
           <div className="max-w-2xl">
-            <p className="inline-flex items-center gap-2 rounded-full bg-brand-600 px-3 py-1 text-sm font-semibold text-white">
+            <p className="pill-light hero-in" style={{ animationDelay: "0ms" }}>
+              <span
+                aria-hidden="true"
+                className="h-1.5 w-1.5 rounded-full bg-accent-400"
+              />
               {siteConfig.tagline}
             </p>
-            <h1 className="mt-5 text-display-sm font-bold text-white sm:text-display-md lg:text-display-lg">
+
+            {/* H1 TEXT IS FROZEN — renders exactly:
+                "Lawn care in Battle Creek done with an edge" */}
+            <h1
+              className="display-1 hero-in mt-6 text-white"
+              style={{ animationDelay: "80ms" }}
+            >
               Lawn care in {siteConfig.location.city} done with{" "}
-              <span className="text-brand-300">an edge</span>
+              <span className="text-accent-400">an edge</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-200">
+
+            <p
+              className="hero-in mt-6 max-w-xl text-lg leading-relaxed text-brand-100"
+              style={{ animationDelay: "160ms" }}
+            >
               Mowing, brush hogging, aeration, leaf cleanup, and snow plowing for
               homes and businesses across {siteConfig.location.city} and the
               surrounding area. {siteConfig.availability}.
             </p>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/request-a-quote" className="btn-primary">
+            {/* One solid primary + one text link — not two competing buttons. */}
+            <div
+              className="hero-in mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6"
+              style={{ animationDelay: "240ms" }}
+            >
+              <Link href="/request-a-quote" className="btn-accent w-full sm:w-auto">
                 Request a free quote
                 <ArrowRightIcon className="ml-2 h-5 w-5" />
               </Link>
               <a
                 href={siteConfig.phone.tel}
                 data-tel-cta
-                className="inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-lg border-2 border-white/70 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-white hover:text-slate-900"
+                className="inline-flex min-h-[48px] items-center gap-2 text-base font-semibold text-white transition-colors hover:text-accent-400"
               >
-                <PhoneIcon className="mr-2 h-5 w-5" />
+                <PhoneIcon className="h-5 w-5" />
                 {siteConfig.phone.display}
               </a>
             </div>
 
-            <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-200">
-              <li className="inline-flex items-center gap-2">
-                <ClockIcon className="h-5 w-5 text-brand-300" />
-                Open 24 hours, 7 days a week
-              </li>
-              <li className="inline-flex items-center gap-2">
-                <HomeIcon className="h-5 w-5 text-brand-300" />
-                Residential &amp; commercial
-              </li>
-              <li className="inline-flex items-center gap-2">
-                <MapPinIcon className="h-5 w-5 text-brand-300" />
-                {siteConfig.serviceArea.description}
-              </li>
-            </ul>
+            {/* Stat row on a hairline rule. */}
+            {/* Deliberate 2x2 on mobile — free-wrapping put "Family" alone on
+                a second row, which read as a mistake. Flex row from sm up. */}
+            <dl
+              className="hero-in mt-10 grid grid-cols-2 gap-x-8 gap-y-5 border-t border-white/20 pt-6 sm:flex sm:flex-wrap sm:gap-x-10"
+              style={{ animationDelay: "320ms" }}
+            >
+              <div>
+                <dt className="sr-only">Years serving Battle Creek</dt>
+                <dd>
+                  <span className="font-heading text-3xl font-bold text-accent-400">
+                    <CountUp value={yearsServing} suffix="+" />
+                  </span>
+                  <span className="mt-0.5 block text-sm text-brand-200">
+                    Years serving {siteConfig.location.city}
+                  </span>
+                </dd>
+              </div>
+              <div>
+                <dt className="sr-only">Availability</dt>
+                <dd>
+                  <span className="font-heading text-3xl font-bold text-accent-400">
+                    24/7
+                  </span>
+                  <span className="mt-0.5 block text-sm text-brand-200">
+                    Call anytime
+                  </span>
+                </dd>
+              </div>
+              <div>
+                <dt className="sr-only">Ownership</dt>
+                <dd>
+                  <span className="font-heading text-3xl font-bold text-accent-400">
+                    Family
+                  </span>
+                  <span className="mt-0.5 block text-sm text-brand-200">
+                    Owned and operated
+                  </span>
+                </dd>
+              </div>
+            </dl>
           </div>
         </div>
-      </section>
 
-      {/* ---------- TRUST STRIP ---------- */}
-      <section className="border-b border-slate-200 bg-slate-50 py-10">
-        <div className="section">
-          <dl className="grid grid-cols-2 gap-6 border-b border-slate-200 pb-8 sm:grid-cols-4">
-            <div className="text-center">
-              <dt className="sr-only">Years in business</dt>
-              <dd>
-                <span className="block text-3xl font-bold text-brand-700">
-                  <CountUp value={yearsServing} suffix="+" />
-                </span>
-                <span className="mt-1 block text-sm text-slate-600">
-                  Years serving Battle Creek
-                </span>
-              </dd>
-            </div>
-            <div className="text-center">
-              <dt className="sr-only">Availability</dt>
-              <dd>
-                <span className="block text-3xl font-bold text-brand-700">
-                  24/7
-                </span>
-                <span className="mt-1 block text-sm text-slate-600">
-                  Call anytime
-                </span>
-              </dd>
-            </div>
-            <div className="text-center">
-              <dt className="sr-only">Ownership</dt>
-              <dd>
-                <span className="block text-3xl font-bold text-brand-700">
-                  Family
-                </span>
-                <span className="mt-1 block text-sm text-slate-600">
-                  Owned and operated
-                </span>
-              </dd>
-            </div>
-            <div className="text-center">
-              <dt className="sr-only">Services offered</dt>
-              <dd>
-                <span className="block text-3xl font-bold text-brand-700">
-                  <CountUp value={siteConfig.services.length} />
-                </span>
-                <span className="mt-1 block text-sm text-slate-600">
-                  Core services
-                </span>
-              </dd>
-            </div>
-          </dl>
-
-          <div className="mt-8 flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
-            <p className="text-center text-sm font-semibold uppercase tracking-wide text-slate-600 sm:text-left">
-              Screened, approved, and rated by the platforms
-              <br className="hidden sm:block" /> homeowners already trust
+        {/* Floating review card — real review, verbatim. Desktop only; on
+            mobile the hero column already fills the frame. */}
+        <figure className="hero-in absolute bottom-10 right-8 hidden w-[300px] rounded-2xl bg-white/95 p-5 shadow-float backdrop-blur-sm xl:block">
+          <div className="flex gap-0.5 text-accent-600" aria-hidden="true">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <StarIcon key={i} className="h-4 w-4" />
+            ))}
+          </div>
+          <span className="sr-only">Five out of five stars</span>
+          <blockquote className="mt-3">
+            <p className="text-sm leading-relaxed text-ink">
+              &ldquo;{heroReview.text}&rdquo;
             </p>
-            <TrustBadges />
+          </blockquote>
+          <figcaption className="mt-3 text-sm font-semibold text-ink-muted">
+            &mdash; {heroReview.name}
+          </figcaption>
+        </figure>
+      </section>
+
+      {/* ================= TRUST STRIP ================= */}
+      <section className="border-b border-line bg-surface-tint">
+        <div className="section py-8">
+          <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm font-medium text-ink-muted">
+            <li className="inline-flex items-center gap-2">
+              <ClockIcon className="h-5 w-5 text-brand-600" />
+              Open 24 hours, 7 days a week
+            </li>
+            <li className="inline-flex items-center gap-2">
+              <HomeIcon className="h-5 w-5 text-brand-600" />
+              Residential &amp; commercial
+            </li>
+            <li className="inline-flex items-center gap-2">
+              <MapPinIcon className="h-5 w-5 text-brand-600" />
+              {siteConfig.serviceArea.description}
+            </li>
+          </ul>
+
+          <div className="mt-8 flex flex-col items-center gap-5 border-t border-line pt-8">
+            <p className="eyebrow text-brand-700">
+              Screened, approved, and rated
+            </p>
+            <TrustBadges compact />
           </div>
         </div>
       </section>
 
-      {/* ---------- SERVICES ---------- */}
-      <section className="py-20 sm:py-24" id="services">
+      {/* ================= SERVICES ================= */}
+      <section className="band" id="services">
         <div className="section">
           <Reveal className="max-w-2xl">
-            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-              Everything your property needs, all year
+            <p className="eyebrow text-brand-700">What we do</p>
+            <h2 className="display-2 mt-3 text-ink">
+              Everything your property needs,{" "}
+              <span className="text-brand-700">all year</span>
             </h2>
-            <p className="mt-4 text-lg text-slate-600">
+            <p className="mt-5 text-lg leading-relaxed text-ink-muted">
               {siteConfig.positioning} serving {siteConfig.location.city} and the
               surrounding areas since {siteConfig.sinceYear}.
             </p>
@@ -231,30 +282,30 @@ export default function HomePage() {
                 <Reveal as="li" key={service.slug} delay={i * 60}>
                   <Link
                     href={`/${service.slug}`}
-                    className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white transition-colors hover:border-brand-600"
+                    className="group card-interactive flex h-full flex-col overflow-hidden"
                   >
-                    <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                    <div className="card-media aspect-[16/10]">
                       <Image
                         src={meta.image.src}
                         alt={meta.image.alt}
                         fill
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                        className="object-cover"
+                        className="card-zoom-img"
                       />
                     </div>
                     <div className="flex flex-1 flex-col p-6">
-                      <div className="flex items-center gap-3">
-                        <meta.Icon className="h-7 w-7 flex-shrink-0 text-brand-600" />
-                        <h3 className="text-lg font-semibold text-slate-900">
-                          {service.name}
-                        </h3>
-                      </div>
-                      <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
+                      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-100">
+                        <meta.Icon className="h-5 w-5 text-brand-700" />
+                      </span>
+                      <h3 className="mt-4 text-lg font-semibold text-ink">
+                        {service.name}
+                      </h3>
+                      <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted">
                         {service.shortDescription}
                       </p>
-                      <span className="mt-4 inline-flex items-center text-sm font-semibold text-brand-700 group-hover:text-brand-800">
+                      <span className="mt-4 inline-flex items-center text-sm font-semibold text-brand-700">
                         Learn more
-                        <ArrowRightIcon className="ml-1.5 h-4 w-4" />
+                        <ArrowRightIcon className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                       </span>
                     </div>
                   </Link>
@@ -265,64 +316,72 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ---------- SERVICE WITH AN EDGE ---------- */}
-      <section className="bg-slate-900 py-20 sm:py-24">
+      {/* ================= SERVICE WITH AN EDGE ================= */}
+      <section className="band bg-brand-950">
         <div className="section">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <Reveal>
-              <p className="text-sm font-semibold uppercase tracking-wide text-brand-300">
-                Our motto
-              </p>
-              <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
-                &ldquo;{siteConfig.motto}&rdquo;
-              </h2>
-              <p className="mt-5 text-lg leading-relaxed text-slate-300">
-                {siteConfig.about.origin}
-              </p>
-              <Link href="/about-us" className="btn-primary mt-8">
-                More about Brad&rsquo;s
-                <ArrowRightIcon className="ml-2 h-5 w-5" />
-              </Link>
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+            <Reveal className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-brand-900">
+              <Image
+                src={images.equipmentLineup.src}
+                alt={images.equipmentLineup.alt}
+                fill
+                loading="lazy"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
             </Reveal>
 
-            <ul className="space-y-6">
-              {edgePillars.map((pillar, i) => (
-                <Reveal as="li" key={pillar.title} delay={i * 80}>
-                  <div className="rounded-xl border border-slate-700 bg-slate-800 p-6">
+            <div>
+              <Reveal>
+                <p className="eyebrow text-accent-500">Our motto</p>
+                <h2 className="display-2 mt-3 text-white">
+                  Service with{" "}
+                  <span className="text-accent-400">an edge</span>
+                </h2>
+                <p className="mt-5 text-lg leading-relaxed text-brand-200">
+                  {siteConfig.about.origin}
+                </p>
+              </Reveal>
+
+              <ul className="mt-8 space-y-5">
+                {edgePillars.map((pillar, i) => (
+                  <Reveal as="li" key={pillar.title} delay={i * 70}>
                     <div className="flex items-start gap-4">
-                      <span className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brand-600">
-                        <CheckIcon className="h-5 w-5 text-white" />
+                      <span className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-accent-500">
+                        <CheckIcon className="h-5 w-5 text-brand-950" />
                       </span>
                       <div>
-                        <h3 className="font-semibold text-white">
-                          {pillar.title}
-                        </h3>
-                        <p className="mt-1.5 text-sm leading-relaxed text-slate-300">
+                        <h3 className="font-semibold text-white">{pillar.title}</h3>
+                        <p className="mt-1 text-sm leading-relaxed text-brand-200">
                           {pillar.body}
                         </p>
                       </div>
                     </div>
-                  </div>
-                </Reveal>
-              ))}
-            </ul>
+                  </Reveal>
+                ))}
+              </ul>
+
+              <Reveal delay={220}>
+                <Link href="/about-us" className="btn-accent mt-9">
+                  More about Brad&rsquo;s
+                  <ArrowRightIcon className="ml-2 h-5 w-5" />
+                </Link>
+              </Reveal>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ---------- REVIEWS ----------
-          Horizontal scroll-snap carousel. Pure CSS, so every review is in the
-          static HTML and swipeable/scrollable without JavaScript. */}
-      <section className="py-20 sm:py-24">
+      {/* ================= REVIEWS ================= */}
+      <section className="band bg-surface-tint">
         <div className="section">
-          <Reveal className="flex flex-wrap items-end justify-between gap-4">
+          <Reveal className="flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-2xl">
-              <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-                What {siteConfig.location.city} neighbors say
+              <p className="eyebrow text-brand-700">Reviews</p>
+              <h2 className="display-2 mt-3 text-ink">
+                What {siteConfig.location.city}{" "}
+                <span className="text-brand-700">neighbors say</span>
               </h2>
-              <p className="mt-4 text-lg text-slate-600">
-                Real reviews from real customers across the area.
-              </p>
             </div>
             <Link href="/reviews" className="btn-secondary">
               Read all reviews
@@ -332,34 +391,28 @@ export default function HomePage() {
         </div>
 
         {/*
-          `contain:layout paint` is load-bearing, not decorative.
-
-          Without it this full-bleed scroller widens the mobile LAYOUT viewport
-          even though overflow-x:auto clips it visually — window.innerWidth
-          measured 1560 on a 390px screen. The position:fixed mobile CTA bar
-          sizes to that viewport, so it rendered 1560px wide with "Get a Quote"
-          off-screen. Containment isolates this subtree's layout so its
-          overflow can't reach the viewport calculation.
-
-          Verified: overflow-hidden wrappers, max-width, width:100%, and
-          scroll-snap-type:none all fail to fix it. Containment is what works.
+          `contain:layout paint` is load-bearing. Without it this full-bleed
+          scroller widens the mobile LAYOUT viewport (window.innerWidth hit 1560
+          on a 390px screen) and the position:fixed CTA bar, which sizes to the
+          viewport, rendered off-screen. Wrappers/max-width/scroll-snap toggles
+          were all tested and do not fix it. Do not remove.
         */}
-        <ul className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 [contain:layout_paint] sm:px-6 lg:px-8 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-300">
+        <ul className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 [contain:layout_paint] sm:px-6 lg:px-8 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-brand-200">
           {featuredReviews.map((review) => (
             <li
               key={review.name}
-              className="flex w-[86%] flex-shrink-0 snap-start flex-col rounded-xl border border-slate-200 bg-slate-50 p-6 sm:w-[46%] lg:w-[31%]"
+              className="card flex w-[86%] flex-shrink-0 snap-start flex-col p-6 sm:w-[46%] lg:w-[31%]"
             >
-              <div className="flex gap-0.5 text-amber-500" aria-hidden="true">
+              <div className="flex gap-0.5 text-accent-600" aria-hidden="true">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <StarIcon key={i} className="h-5 w-5" />
                 ))}
               </div>
               <span className="sr-only">Five out of five stars</span>
-              <blockquote className="mt-4 flex-1 text-slate-700">
+              <blockquote className="mt-4 flex-1 text-ink-muted">
                 <p className="leading-relaxed">&ldquo;{review.text}&rdquo;</p>
               </blockquote>
-              <p className="mt-4 text-sm font-semibold text-slate-900">
+              <p className="mt-5 border-t border-line pt-4 text-sm font-semibold text-ink">
                 {review.name}
               </p>
             </li>
@@ -367,57 +420,45 @@ export default function HomePage() {
         </ul>
       </section>
 
-      {/* ---------- SERVICE AREA ---------- */}
-      <section className="border-y border-slate-200 bg-slate-50 py-20 sm:py-24">
-        <div className="section">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <Reveal>
-              <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-                Serving {siteConfig.location.city} and the surrounding areas
-              </h2>
-              <p className="mt-4 text-lg leading-relaxed text-slate-600">
-                We take care of homes, offices, and commercial properties
-                throughout the {siteConfig.location.city} area. If you are not
-                sure whether we reach your street, just call and ask.
-              </p>
-              <div className="mt-6">
-                <p className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-                  ZIP codes we serve
-                </p>
-                <ul className="mt-3 flex flex-wrap gap-2">
-                  {siteConfig.serviceArea.zips.map((zip) => (
-                    <li
-                      key={zip}
-                      className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700"
-                    >
-                      {zip}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <Link href="/areas-we-serve" className="btn-secondary mt-7">
-                See our service area
-                <ArrowRightIcon className="ml-2 h-5 w-5" />
-              </Link>
-            </Reveal>
+      {/* ================= SERVICE AREA ================= */}
+      <section className="bg-brand-600">
+        <div className="section band-tight text-center">
+          <Reveal>
+            <p className="eyebrow inline-flex items-center gap-2 text-brand-100">
+              <MapPinIcon className="h-4 w-4" />
+              Proudly local
+            </p>
+            <h2 className="display-2 mx-auto mt-3 max-w-3xl text-white">
+              Serving {siteConfig.location.city} and the surrounding areas
+            </h2>
 
-            <Reveal className="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-200">
-              <Image
-                src={images.equipmentLineup.src}
-                alt={images.equipmentLineup.alt}
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </Reveal>
-          </div>
+            <ul className="mt-8 flex flex-wrap justify-center gap-2.5">
+              {siteConfig.serviceArea.zips.map((zip) => (
+                <li
+                  key={zip}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm font-medium text-white"
+                >
+                  <CheckIcon className="h-4 w-4" />
+                  {zip}
+                </li>
+              ))}
+            </ul>
+
+            <Link
+              href="/areas-we-serve"
+              className="btn mt-8 bg-white text-brand-700 hover:-translate-y-px hover:bg-brand-50"
+            >
+              See your area
+              <ArrowRightIcon className="ml-2 h-5 w-5" />
+            </Link>
+          </Reveal>
         </div>
       </section>
 
-      {/* ---------- FAQ ---------- */}
+      {/* ================= FAQ ================= */}
       <FAQ items={homeFaqs} />
 
-      {/* ---------- CLOSING CTA ---------- */}
+      {/* ================= CLOSING CTA ================= */}
       <CTASection />
     </>
   );

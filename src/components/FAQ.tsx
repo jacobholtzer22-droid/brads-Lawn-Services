@@ -13,12 +13,11 @@ export function FAQ({
   id?: string;
 }) {
   return (
-    <section className="py-20 sm:py-24" id={id}>
+    <section className="band" id={id}>
       <div className="section">
         <div className="mx-auto max-w-3xl">
-          <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-            {heading}
-          </h2>
+          <p className="eyebrow text-brand-700">Questions</p>
+          <h2 className="display-2 mt-3 text-ink">{heading}</h2>
 
           {/*
             Plain <details> rather than <dl>/<dt>/<dd>. A <dl> may only contain
@@ -28,16 +27,16 @@ export function FAQ({
             element, so nothing is lost — and <h3> gives a correct heading
             hierarchy under the section's <h2>.
           */}
-          <div className="mt-10 divide-y divide-slate-200 border-t border-slate-200">
+          <div className="mt-10 divide-y divide-line border-t border-line">
             {items.map((item) => (
               <details key={item.q} className="group py-2">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-left [&::-webkit-details-marker]:hidden">
-                  <h3 className="text-lg font-semibold text-slate-900">
+                  <h3 className="font-heading text-lg font-semibold text-ink sm:text-xl">
                     {item.q}
                   </h3>
                   <span
                     aria-hidden="true"
-                    className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition-colors group-open:border-brand-600 group-open:bg-brand-600 group-open:text-white"
+                    className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-line text-ink-muted transition-colors group-hover:border-brand-300 group-open:border-accent-500 group-open:bg-accent-500 group-open:text-brand-950"
                   >
                     <svg
                       className="h-4 w-4 transition-transform group-open:rotate-45"
@@ -54,7 +53,7 @@ export function FAQ({
                     </svg>
                   </span>
                 </summary>
-                <p className="pb-5 pr-12 text-base leading-relaxed text-slate-600">
+                <p className="pb-6 pr-12 text-base leading-relaxed text-ink-muted">
                   {item.a}
                 </p>
               </details>

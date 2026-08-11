@@ -26,7 +26,7 @@
   }
 
   body {
-    @apply bg-white text-slate-900;
+    @apply bg-surface text-ink;
   }
 
   h1,
@@ -46,16 +46,96 @@
 }
 
 @layer components {
-  .btn-primary {
-    @apply inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-lg bg-brand-600 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-700;
-  }
-
-  .btn-secondary {
-    @apply inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-lg border-2 border-brand-600 bg-white px-6 py-3 text-base font-semibold text-brand-700 transition-colors hover:bg-brand-50;
-  }
+  /* ---------------- layout ---------------- */
 
   .section {
     @apply mx-auto max-w-content px-4 sm:px-6 lg:px-8;
+  }
+
+  /* 96px desktop / 64px mobile section rhythm. */
+  .band {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .band-tight {
+    @apply py-10 sm:py-12 lg:py-16;
+  }
+
+  /* ---------------- typography ---------------- */
+
+  /* Small, uppercase, tracked. accent-500 on dark / brand-700 on light. */
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.14em];
+  }
+
+  .display-1 {
+    @apply font-heading text-display-sm font-bold sm:text-display-md lg:text-display-lg;
+  }
+
+  .display-2 {
+    @apply font-heading text-3xl font-bold sm:text-4xl lg:text-[2.75rem] lg:leading-[1.08];
+  }
+
+  /* ---------------- buttons ----------------
+     All pills. Min height 48px for comfortable touch targets. */
+
+  .btn {
+    @apply inline-flex min-h-[48px] cursor-pointer items-center justify-center rounded-full px-6 py-3 text-base font-semibold transition-all duration-150;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-600 text-white hover:-translate-y-px hover:bg-brand-700;
+  }
+
+  /* Hero primary — amber on the dark green ground. 7.61:1 contrast. */
+  .btn-accent {
+    @apply btn bg-accent-500 text-brand-950 hover:-translate-y-px hover:bg-accent-400;
+  }
+
+  .btn-secondary {
+    @apply btn border-[1.5px] border-brand-600 bg-transparent text-brand-700 hover:bg-brand-50;
+  }
+
+  /* On dark grounds. */
+  .btn-ghost-light {
+    @apply btn border-[1.5px] border-white/60 bg-transparent text-white hover:bg-white hover:text-brand-950;
+  }
+
+  /* ---------------- cards ---------------- */
+
+  .card {
+    @apply rounded-2xl border border-line bg-surface shadow-card transition-all duration-[250ms];
+  }
+
+  .card-interactive {
+    @apply card hover:-translate-y-1 hover:border-brand-200 hover:shadow-card-hover;
+  }
+
+  /* Image wrapper inside a card — pairs with .card-zoom-img for hover zoom. */
+  .card-media {
+    @apply relative overflow-hidden bg-brand-50;
+  }
+
+  .card-zoom-img {
+    @apply object-cover transition-transform duration-[400ms] ease-out;
+  }
+
+  .group:hover .card-zoom-img {
+    @apply scale-[1.04];
+  }
+
+  /* ---------------- pills ---------------- */
+
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-medium;
+  }
+
+  .pill-light {
+    @apply pill border border-white/25 bg-white/10 text-white backdrop-blur-sm;
+  }
+
+  .pill-outline {
+    @apply pill border border-line bg-surface text-ink;
   }
 }
 
@@ -80,17 +160,45 @@
   transform: none;
 }
 
+/* Hero entrance. Staggered by inline animation-delay in the markup.
+   `both` fill keeps the pre-paint state from flashing, and because the
+   element still occupies its box, nothing shifts. */
+.js .hero-in {
+  animation: hero-in 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  /* Reveal targets snap straight to their final state. */
+  /* Reveal + hero targets snap straight to their final state. */
   .js .reveal,
   .js .reveal.is-visible {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .js .hero-in {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+
+  .group:hover .card-zoom-img {
+    transform: none;
   }
 
   *,

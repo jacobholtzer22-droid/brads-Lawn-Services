@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lexend, Source_Sans_3 } from "next/font/google";
+import { Fraunces, Source_Sans_3 } from "next/font/google";
 import { siteConfig } from "@/lib/site.config";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -15,10 +15,19 @@ const body = Source_Sans_3({
   display: "swap",
 });
 
-const heading = Lexend({
+/**
+ * Display face. Fraunces — warm, characterful serif with real weight.
+ *
+ * Static 600/700 instances, NOT the variable file. Requesting the variable
+ * font with SOFT+opsz axes shipped a 118 KB woff2 — the single largest asset
+ * on the page — and pushed mobile LCP to 4.1s. Two static weights cover every
+ * heading in the design system at a fraction of the size.
+ */
+const heading = Fraunces({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
+  weight: ["600", "700"],
 });
 
 export const metadata: Metadata = {
