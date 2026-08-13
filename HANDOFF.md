@@ -14,7 +14,6 @@ Set these in **Project → Settings → Environment Variables**, for Production
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | `https://www.bradslawnservices.com` | www is canonical. Drives canonicals, sitemap, OG URLs, JSON-LD. |
 | `NEXT_PUBLIC_CRM_URL` | `https://www.alignandacquire.com/api/contact` | **Must be the www host.** The bare apex 308s and the cross-origin POST preflight fails against a redirect → silent lead loss. |
-| `NEXT_PUBLIC_BUSINESS_SLUG` | *the real slug* | Currently `REPLACE_ME_SLUG`. See §2. |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | *your token* | Use **your own** Search Console token. Do not reuse the old site's — it belongs to the previous vendor. |
 | `NEXT_PUBLIC_AW_CONVERSION_ID` | `AW-XXXXXXXXXX` | Optional. Empty = no tracking loads at all. |
 | `NEXT_PUBLIC_AW_FORM_LABEL` | conversion label | Fires on successful quote-form submit. |
@@ -30,21 +29,37 @@ Set these in **Project → Settings → Environment Variables**, for Production
 
 ## 2. Business slug verification runbook
 
-**A wrong slug returns HTTP 200 and silently drops the lead.** The form shows
-its success state, the customer thinks they've reached you, and nothing is
-recorded anywhere. The only proof that works is an end-to-end test lead that you
-can see in the platform admin.
+**The slug is a literal in the code, not an environment variable.**
 
-1. In the platform admin, confirm a Business row exists for Brad's Lawn
-   Services (or create it).
-2. Copy the `slug` value **from the database**, exactly. Don't retype it, don't
-   guess it from the business name.
-3. Set `NEXT_PUBLIC_BUSINESS_SLUG` in Vercel to that value.
-4. Redeploy with build cache disabled.
-5. Submit a real test lead through `/request-a-quote` on the live site.
-6. Confirm it appears in the platform admin as a `WebsiteLead`. **If it doesn't
-   appear, the slug is wrong** — a 200 response proves nothing.
-7. Delete the test lead.
+```
+src/lib/site.config.ts
+  businessSlug: "bls-1775740872941",
+```
+
+There is no `NEXT_PUBLIC_BUSINESS_SLUG` env var — setting one in Vercel does
+nothing. To change the slug, edit that line and redeploy.
+
+**Why verification matters:** a wrong slug returns **HTTP 200 with no database
+write**. The form shows its success state, the customer believes they've reached
+Brad, and the lead is gone. A 200 response proves nothing. The only proof is a
+row in the database.
+
+### Verify
+
+1. Submit a real test lead through `/request-a-quote` on the deployed site.
+   Tick the SMS consent box — see §3, the endpoint rejects submissions without
+   it.
+2. In the platform, confirm a **`WebsiteLead` row was created** and that its
+   **`businessId` resolves to Brad's Lawn Services**. Matching on name or
+   timestamp alone is not enough; the `businessId` is what proves the slug
+   resolved to the right tenant.
+3. If no row appears, the slug does not match any Business row — fix the
+   literal in `site.config.ts` and redeploy.
+4. If a row appears under the **wrong** business, the slug matched a different
+   tenant. Same fix, and check that tenant for stray leads.
+5. Delete the test lead.
+
+No env inspection step exists, because there is no env var to inspect.
 
 ---
 

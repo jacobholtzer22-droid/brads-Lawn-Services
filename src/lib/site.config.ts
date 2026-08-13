@@ -97,7 +97,7 @@ export const siteConfig = {
   crmUrl:
     process.env.NEXT_PUBLIC_CRM_URL ||
     "https://www.alignandacquire.com/api/contact",
-  businessSlug: process.env.NEXT_PUBLIC_BUSINESS_SLUG || "REPLACE_ME_SLUG",
+  businessSlug: "bls-1775740872941",
 
   /**
    * Name of the honeypot field the CRM's spam check reads. Configurable
