@@ -40,7 +40,7 @@ const config: Config = {
           300: "#DCCAA7",
           400: "#CDB388", // accent phrase in headings on dark
           500: "#C0A273", // eyebrows on dark, stat values, hero button
-          600: "#957748", // review stars — passes 3:1 on white and both tan grounds
+          600: "#866B41", // review stars — clears 3:1 on card, ground AND deep band
           700: "#866B41",
           800: "#6B5634", // accent text on light
           900: "#574629",
@@ -54,12 +54,12 @@ const config: Config = {
            site should read as tan + forest green, with neutral used only
            where it earns its keep (form inputs, so typing stays crisp). */
         surface: {
-          DEFAULT: "#EDE4D3", // page ground
-          tint: "#E3D8C2",    // deeper tan band
-          card: "#F8F3E8",    // raised surfaces, lifts off the ground
-          input: "#FCFAF5",   // the small neutral allowance
+          DEFAULT: "#E5D9C3", // page ground — deeper tan
+          tint: "#D9CBB0",    // deeper tan band
+          card: "#F2EBDC",    // raised surfaces, lifts off the ground
+          input: "#FBF8F1",   // the small neutral allowance
         },
-        line: "#D6C9AF",
+        line: "#C9B994",
       },
       fontFamily: {
         /* Fraunces: variable serif, warm, real weight at 600-700. */

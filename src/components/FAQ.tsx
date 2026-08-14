@@ -53,7 +53,7 @@ export function FAQ({
                     </svg>
                   </span>
                 </summary>
-                <p className="pb-6 pr-12 text-base leading-relaxed text-ink-muted">
+                <p className="faq-answer pb-6 pr-12 text-base leading-relaxed text-ink-muted">
                   {item.a}
                 </p>
               </details>

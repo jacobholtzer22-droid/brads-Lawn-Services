@@ -103,7 +103,7 @@ export function Header() {
             <div
               className={`absolute left-0 top-full w-64 pt-2 ${servicesOpen ? "block" : "hidden"}`}
             >
-              <ul className="overflow-hidden rounded-2xl border border-line bg-surface-card py-1.5 shadow-card-hover">
+              <ul className="pop-in overflow-hidden rounded-2xl border border-line bg-surface-card py-1.5 shadow-card-hover">
                 {siteConfig.services.map((s) => (
                   <li key={s.slug}>
                     <Link
@@ -190,7 +190,7 @@ export function Header() {
 
       {/* ---------- mobile menu ---------- */}
       {menuOpen && (
-        <div className="max-h-[calc(100vh-4.5rem)] overflow-y-auto border-t border-line bg-surface lg:hidden">
+        <div className="menu-in max-h-[calc(100vh-4.5rem)] overflow-y-auto border-t border-line bg-surface lg:hidden">
           <div className="space-y-1 px-4 pb-6 pt-3">
             <p className="eyebrow px-3 pb-1 pt-2 text-brand-700">Services</p>
             {siteConfig.services.map((s) => (

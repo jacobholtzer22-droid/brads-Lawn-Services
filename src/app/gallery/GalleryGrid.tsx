@@ -109,7 +109,7 @@ export function GalleryGrid() {
       </div>
 
       {/* ---------- grid ---------- */}
-      <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <ul key={filter} className="grid-swap mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {visible.map((item, i) => {
           const img = images[item.slot as keyof typeof images];
           if (!img) return null;
@@ -153,7 +153,7 @@ export function GalleryGrid() {
           role="dialog"
           aria-modal="true"
           aria-label={currentImg.alt}
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-brand-950/95 p-4 backdrop-blur-sm"
+          className="lightbox-backdrop fixed inset-0 z-[60] flex items-center justify-center bg-brand-950/95 p-4 backdrop-blur-sm"
           onClick={close}
         >
           <button
@@ -203,7 +203,7 @@ export function GalleryGrid() {
           )}
 
           <figure
-            className="max-h-full w-full max-w-4xl"
+            className="lightbox-figure max-h-full w-full max-w-4xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-brand-900">
