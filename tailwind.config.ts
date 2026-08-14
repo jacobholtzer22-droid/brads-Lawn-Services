@@ -15,37 +15,47 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        /* Forest green. Deeper and cooler than the old grass green, with the
+           mid of the ramp still close to the logo mark so the header wordmark
+           sits comfortably against it. */
         brand: {
-          50: "#F2F8F1",
-          100: "#E4F1E3",
-          200: "#C6E3C3",
-          300: "#97CA93",
-          400: "#6AB365",
-          500: "#4A9E46",
-          600: "#397C36", // logo green — primary CTA
-          700: "#2B7328", // logo dark edge — hover, links on white
-          800: "#1D4423",
-          900: "#14301A",
-          950: "#0F2410", // hero ground, footer
+          50: "#F2F6F1",
+          100: "#DFEADD",
+          200: "#BFD5BC",
+          300: "#93B790",
+          400: "#679565",
+          500: "#4A7C48",
+          600: "#37663A", // primary CTA
+          700: "#2A5230", // hover, links on light
+          800: "#204026",
+          900: "#18311D",
+          950: "#0E1F14", // hero ground, footer, dark bands
         },
+        /* Tan. Replaces the previous harvest amber as the accent: eyebrows and
+           stat values on dark grounds, the hero button fill, review stars. */
         accent: {
-          300: "#F5C97A",
-          400: "#F0B646", // accent phrase in headings on dark
-          500: "#E8A33D", // eyebrows on dark, stat values
-          600: "#C27C15",
-          700: "#9A6110",
-          800: "#8A5A0B", // accent text on white
+          50: "#FBF8F2",
+          100: "#F5EFE3",
+          200: "#EADFC9",
+          300: "#DCCAA7",
+          400: "#CDB388", // accent phrase in headings on dark
+          500: "#C0A273", // eyebrows on dark, stat values, hero button
+          600: "#957748", // review stars — passes 3:1 on white and both tan grounds
+          700: "#866B41",
+          800: "#6B5634", // accent text on light
+          900: "#574629",
         },
-        /* Warm-shifted neutrals — deliberately not blue-grey slate. */
+        /* Warm neutrals, tan-tinted rather than green-tinted. */
         ink: {
-          DEFAULT: "#1C2A1C",
-          muted: "#4A5A48",
+          DEFAULT: "#1B2A1D",
+          muted: "#4C5A4B",
         },
         surface: {
-          DEFAULT: "#FFFFFF",
-          tint: "#F4F7F2",
+          DEFAULT: "#FBF8F2", // light tan — the page ground, not white
+          tint: "#F2EDE0",    // deeper tan — alternating bands
+          card: "#FFFFFF",    // cards stay white so they lift off the tan
         },
-        line: "#E3E9E0",
+        line: "#E4DCCB",
       },
       fontFamily: {
         /* Fraunces: variable serif, warm, real weight at 600-700. */
@@ -63,10 +73,10 @@ const config: Config = {
       },
       boxShadow: {
         /* Brand-tinted, low opacity — never neutral black, never heavy. */
-        card: "0 1px 2px rgba(28,42,28,0.05), 0 8px 24px -12px rgba(28,42,28,0.12)",
+        card: "0 1px 2px rgba(27,42,29,0.05), 0 8px 24px -12px rgba(27,42,29,0.12)",
         "card-hover":
-          "0 2px 4px rgba(28,42,28,0.06), 0 18px 40px -16px rgba(28,42,28,0.22)",
-        float: "0 12px 32px -8px rgba(15,36,16,0.35)",
+          "0 2px 4px rgba(27,42,29,0.06), 0 18px 40px -16px rgba(27,42,29,0.22)",
+        float: "0 12px 32px -8px rgba(14,31,20,0.35)",
       },
       transitionDuration: {
         DEFAULT: "200ms",

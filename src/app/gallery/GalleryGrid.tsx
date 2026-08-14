@@ -95,7 +95,7 @@ export function GalleryGrid() {
               className={`inline-flex min-h-[44px] flex-shrink-0 items-center gap-2 whitespace-nowrap rounded-full border px-4 text-sm font-semibold transition-colors ${
                 active
                   ? "border-brand-600 bg-brand-600 text-white"
-                  : "border-line bg-surface text-ink hover:border-brand-300 hover:text-brand-700"
+                  : "border-line bg-surface-card text-ink hover:border-brand-300 hover:text-brand-700"
               }`}
             >
               {active && <CheckIcon className="h-4 w-4" />}

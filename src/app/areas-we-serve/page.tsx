@@ -73,7 +73,7 @@ export default function AreasWeServePage() {
                 {siteConfig.serviceArea.zips.map((zip) => (
                   <li
                     key={zip}
-                    className="flex items-center gap-3 rounded-lg border border-line bg-white px-4 py-3"
+                    className="flex items-center gap-3 rounded-xl border border-line bg-surface-card px-4 py-3"
                   >
                     <MapPinIcon className="h-5 w-5 flex-shrink-0 text-brand-600" />
                     <span className="font-medium text-ink">{zip}</span>

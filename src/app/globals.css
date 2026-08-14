@@ -104,7 +104,7 @@
   /* ---------------- cards ---------------- */
 
   .card {
-    @apply rounded-2xl border border-line bg-surface shadow-card transition-all duration-[250ms];
+    @apply rounded-2xl border border-line bg-surface-card shadow-card transition-all duration-[250ms];
   }
 
   .card-interactive {
@@ -135,7 +135,7 @@
   }
 
   .pill-outline {
-    @apply pill border border-line bg-surface text-ink;
+    @apply pill border border-line bg-surface-card text-ink;
   }
 }
 
