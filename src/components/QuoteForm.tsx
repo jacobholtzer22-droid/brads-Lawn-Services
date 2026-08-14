@@ -134,7 +134,7 @@ export function QuoteForm({ id = "quote-form" }: { id?: string }) {
   }
 
   const inputClass =
-    "mt-1.5 block w-full min-h-[48px] rounded-xl border border-line bg-surface-card px-4 py-3 text-base text-ink transition-colors placeholder:text-brand-300 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/25";
+    "mt-1.5 block w-full min-h-[48px] rounded-xl border border-line bg-surface-input px-4 py-3 text-base text-ink transition-colors placeholder:text-brand-300 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/25";
 
   return (
     <form

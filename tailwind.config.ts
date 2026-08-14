@@ -50,12 +50,16 @@ const config: Config = {
           DEFAULT: "#1B2A1D",
           muted: "#4C5A4B",
         },
+        /* Committed tan. The ground is a real tan, not an off-white — the
+           site should read as tan + forest green, with neutral used only
+           where it earns its keep (form inputs, so typing stays crisp). */
         surface: {
-          DEFAULT: "#FBF8F2", // light tan — the page ground, not white
-          tint: "#F2EDE0",    // deeper tan — alternating bands
-          card: "#FFFFFF",    // cards stay white so they lift off the tan
+          DEFAULT: "#EDE4D3", // page ground
+          tint: "#E3D8C2",    // deeper tan band
+          card: "#F8F3E8",    // raised surfaces, lifts off the ground
+          input: "#FCFAF5",   // the small neutral allowance
         },
-        line: "#E4DCCB",
+        line: "#D6C9AF",
       },
       fontFamily: {
         /* Fraunces: variable serif, warm, real weight at 600-700. */
