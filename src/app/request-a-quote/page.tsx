@@ -34,7 +34,7 @@ export default function RequestAQuotePage() {
         eyebrow="Free quote"
         title="Request a free quote"
         intro={`Tell us about your property and what you need done, and we will get back to you with a price. Prefer to talk it through? Call ${siteConfig.phone.display} — we answer ${siteConfig.availability.toLowerCase()}.`}
-        imageSlot="heroLawn"
+        imageSlot="leafAfterRanch"
       />
 
       <Breadcrumbs

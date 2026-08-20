@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { images } from "../../../content/images";
+import { getImage } from "../../../content/images";
 import { galleryCategories, galleryItems } from "../../../content/gallery";
 import { CheckIcon, ChevronRightIcon } from "@/components/Icons";
 
@@ -11,13 +11,15 @@ type Filter = "All" | (typeof galleryCategories)[number];
 /**
  * Filterable gallery with a lightbox.
  *
- * Both the filter and the lightbox are progressive enhancement. Every image is
- * server-rendered into the initial HTML (this component SSRs with filter =
- * "All"), so with JavaScript disabled the full gallery is present, crawlable,
- * and every figure keeps its caption — only the buttons stop working.
+ * MASONRY, not a fixed grid: 75 of the 91 photos in the 2026 drop are phone
+ * portraits, and a 4:3 crop threw most of each one away. CSS columns let every
+ * photo keep its true aspect ratio, and because each slot carries intrinsic
+ * w/h the browser reserves the right box before the image loads — so a
+ * 100-image page still scores CLS 0.
  *
- * The image set and alt text are frozen by the redesign brief: same files,
- * same alts, presentation only.
+ * Filter and lightbox are both progressive enhancement: the component SSRs
+ * with filter="All", so with JavaScript disabled every photo and caption is
+ * present and crawlable and only the buttons stop working.
  */
 export function GalleryGrid() {
   const [filter, setFilter] = useState<Filter>("All");
@@ -54,7 +56,6 @@ export function GalleryGrid() {
     };
     document.addEventListener("keydown", onKey);
 
-    // Stop the page scrolling behind the lightbox.
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     closeButtonRef.current?.focus();
@@ -71,7 +72,7 @@ export function GalleryGrid() {
   };
 
   const current = openIndex === null ? null : visible[openIndex];
-  const currentImg = current ? images[current.slot as keyof typeof images] : null;
+  const currentImg = current ? getImage(current.slot) : undefined;
 
   return (
     <>
@@ -108,44 +109,50 @@ export function GalleryGrid() {
         })}
       </div>
 
-      {/* ---------- grid ---------- */}
-      <ul key={filter} className="grid-swap mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {/* ---------- masonry ---------- */}
+      <div
+        key={filter}
+        className="grid-swap mt-8 columns-1 gap-5 sm:columns-2 lg:columns-3"
+      >
         {visible.map((item, i) => {
-          const img = images[item.slot as keyof typeof images];
+          const img = getImage(item.slot);
           if (!img) return null;
           return (
-            <li key={item.slot}>
-              <figure className="card group h-full overflow-hidden">
-                <button
-                  type="button"
-                  onClick={(e) => open(i, e.currentTarget)}
-                  className="block w-full text-left"
-                  aria-label={`View larger: ${img.alt}`}
-                >
-                  <div className="card-media aspect-[4/3]">
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      loading="lazy"
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className="card-zoom-img"
-                    />
-                  </div>
-                </button>
-                <figcaption className="flex items-start justify-between gap-3 px-4 py-3.5">
-                  <span className="text-sm leading-relaxed text-ink-muted">
-                    {img.alt}
-                  </span>
-                  <span className="flex-shrink-0 rounded-full bg-brand-50 px-2.5 py-1 text-xs font-semibold text-brand-700">
-                    {item.category}
-                  </span>
-                </figcaption>
-              </figure>
-            </li>
+            <figure
+              key={item.slot}
+              className="card group mb-5 block break-inside-avoid overflow-hidden"
+            >
+              <button
+                type="button"
+                onClick={(e) => open(i, e.currentTarget)}
+                className="block w-full text-left"
+                aria-label={`View larger: ${img.alt}`}
+              >
+                <div className="card-media">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={img.w}
+                    height={img.h}
+                    loading="lazy"
+                    quality={62}
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="card-zoom-img h-auto w-full"
+                  />
+                </div>
+              </button>
+              <figcaption className="flex items-start justify-between gap-3 px-4 py-3.5">
+                <span className="text-sm leading-relaxed text-ink-muted">
+                  {img.alt}
+                </span>
+                <span className="flex-shrink-0 rounded-full bg-brand-50 px-2.5 py-1 text-xs font-semibold text-brand-700">
+                  {item.category}
+                </span>
+              </figcaption>
+            </figure>
           );
         })}
-      </ul>
+      </div>
 
       {/* ---------- lightbox ---------- */}
       {current && currentImg && (
@@ -161,7 +168,7 @@ export function GalleryGrid() {
             type="button"
             onClick={close}
             aria-label="Close"
-            className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+            className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
           >
             <svg
               className="h-6 w-6"
@@ -184,7 +191,7 @@ export function GalleryGrid() {
                   step(-1);
                 }}
                 aria-label="Previous image"
-                className="absolute left-3 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:left-6"
+                className="absolute left-3 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:left-6"
               >
                 <ChevronRightIcon className="h-6 w-6 rotate-180" />
               </button>
@@ -195,7 +202,7 @@ export function GalleryGrid() {
                   step(1);
                 }}
                 aria-label="Next image"
-                className="absolute right-3 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-6"
+                className="absolute right-3 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-6"
               >
                 <ChevronRightIcon className="h-6 w-6" />
               </button>
@@ -203,18 +210,18 @@ export function GalleryGrid() {
           )}
 
           <figure
-            className="lightbox-figure max-h-full w-full max-w-4xl"
+            className="flex max-h-full w-full max-w-5xl flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-brand-900">
-              <Image
-                src={currentImg.src}
-                alt={currentImg.alt}
-                fill
-                sizes="(min-width: 1024px) 900px, 100vw"
-                className="object-contain"
-              />
-            </div>
+            <Image
+              src={currentImg.src}
+              alt={currentImg.alt}
+              width={currentImg.w}
+              height={currentImg.h}
+              quality={78}
+              sizes="(min-width: 1024px) 1000px, 100vw"
+              className="max-h-[76vh] w-auto rounded-2xl object-contain"
+            />
             <figcaption className="mt-4 flex flex-wrap items-center justify-center gap-3 text-center">
               <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent-400">
                 {current.category}

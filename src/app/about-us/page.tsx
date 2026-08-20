@@ -58,7 +58,7 @@ export default function AboutPage() {
         eyebrow={siteConfig.tagline}
         title="About Brad's Lawn Services"
         intro={`We are a family business serving ${siteConfig.location.city}, MI and the surrounding areas since ${siteConfig.sinceYear}. Today we are a ${siteConfig.positioning.toLowerCase()} working on homes, offices, and commercial properties.`}
-        imageSlot="equipmentLineup"
+        imageSlot="equipLeafVacTrailer"
       />
 
       <Breadcrumbs

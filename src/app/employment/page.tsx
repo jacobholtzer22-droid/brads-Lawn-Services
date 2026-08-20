@@ -40,7 +40,7 @@ export default function EmploymentPage() {
         eyebrow="Join the crew"
         title="Work at Brad's Lawn Services"
         intro="We are always looking for skilled and qualified crew members around Battle Creek, MI. If you take pride in doing the job right, we would like to hear from you."
-        imageSlot="equipmentLineup"
+        imageSlot="leafColonialRows"
       />
 
       <Breadcrumbs

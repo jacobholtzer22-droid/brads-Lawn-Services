@@ -72,7 +72,13 @@ export const services: ServiceContent[] = [
         body: "Mow, edge, trim, and blow off the hard surfaces. You come home to a finished lawn.",
       },
     ],
-    imageSlots: ["heroLawn", "equipmentLineup"],
+    imageSlots: [
+      "lawnWideManicured",
+      "lawnSummerShrubs",
+      "lawnSummerLush",
+      "lawnWalkEdged",
+      "hedgePorchClean",
+    ],
     faqs: [
       {
         q: "How much does lawn mowing cost in Battle Creek?",
@@ -296,7 +302,14 @@ export const services: ServiceContent[] = [
         body: "Curbside pickup and hauling so the debris leaves with us.",
       },
     ],
-    imageSlots: ["leafPickupTruck", "leafVacuumTrailer", "leafTruck"],
+    imageSlots: [
+      "leafTruckBrandedCrew",
+      "leafTwoCrewVac",
+      "leafHugePile",
+      "leafVacBigPile",
+      "equipLeafVacTrailer",
+      "leafAfterRanch",
+    ],
     faqs: [
       {
         q: "How much does leaf cleanup cost?",
@@ -366,7 +379,14 @@ export const services: ServiceContent[] = [
         body: "Sidewalks and entrances get cleared so people can get in the door safely.",
       },
     ],
-    imageSlots: ["heroSnow", "snowPlowBlade", "commercialSnowClearing"],
+    imageSlots: [
+      "snowPlowBranded",
+      "snowPlowTrucks",
+      "snowLotClearedCars",
+      "snowEntranceCleared",
+      "snowLotSunny",
+      "snowPlowSunrise",
+    ],
     faqs: [
       {
         q: "How much does commercial snow plowing cost?",

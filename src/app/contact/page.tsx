@@ -41,7 +41,7 @@ export default function ContactPage() {
         eyebrow="Get in touch"
         title="Contact Brad's Lawn Services"
         intro={`The fastest way to reach us is the phone. Call ${siteConfig.phone.display} — our listed hours are ${siteConfig.hours.toLowerCase()}, so call whenever works for you.`}
-        imageSlot="heroLawn"
+        imageSlot="lawnSummerLush"
       />
 
       <Breadcrumbs

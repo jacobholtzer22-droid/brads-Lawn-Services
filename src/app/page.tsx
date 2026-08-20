@@ -10,6 +10,7 @@ import { FAQ } from "@/components/FAQ";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
 import { CTASection, TrustBadges } from "@/components/PageSections";
+import { BeforeAfter } from "@/components/BeforeAfter";
 import {
   MowerIcon,
   TractorIcon,
@@ -35,11 +36,11 @@ export const metadata: Metadata = {
 };
 
 const serviceMeta = {
-  "lawn-mowing": { Icon: MowerIcon, image: images.heroLawn },
+  "lawn-mowing": { Icon: MowerIcon, image: images.lawnSummerShrubs },
   "brush-hogging": { Icon: TractorIcon, image: images.brushTractor },
   "core-aeration": { Icon: AerationIcon, image: images.aerationPlugs },
-  "leaf-cleanup": { Icon: LeafIcon, image: images.leafPickupTruck },
-  "snow-plowing": { Icon: SnowIcon, image: images.commercialSnowClearing },
+  "leaf-cleanup": { Icon: LeafIcon, image: images.leafTruckBrandedCrew },
+  "snow-plowing": { Icon: SnowIcon, image: images.snowPlowTrucks },
 } as const;
 
 /** Six reviews for the carousel. All verbatim from content/reviews.ts. */
@@ -104,10 +105,11 @@ export default function HomePage() {
           reads as a photograph. See redesign/REFERENCE-PATTERNS.md §3. */}
       <section className="relative isolate min-h-[640px] overflow-hidden bg-brand-950 lg:min-h-[760px]">
         <Image
-          src={images.heroLawn.src}
-          alt={images.heroLawn.alt}
+          src={images.lawnSummerLush.src}
+          alt={images.lawnSummerLush.alt}
           fill
           priority
+          quality={58}
           sizes="100vw"
           className="absolute inset-0 -z-20 h-full w-full object-cover object-[60%_center]"
         />
@@ -322,8 +324,8 @@ export default function HomePage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
             <Reveal className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-brand-900">
               <Image
-                src={images.equipmentLineup.src}
-                alt={images.equipmentLineup.alt}
+                src={images.equipTractorLeaves.src}
+                alt={images.equipTractorLeaves.alt}
                 fill
                 loading="lazy"
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -419,6 +421,13 @@ export default function HomePage() {
           ))}
         </ul>
       </section>
+
+      {/* ================= BEFORE / AFTER ================= */}
+      <BeforeAfter
+        limit={3}
+        heading="See the difference for yourself"
+        intro="Same property, same day. Three real jobs from around Battle Creek — the rest are in the gallery."
+      />
 
       {/* ================= SERVICE AREA ================= */}
       <section className="bg-brand-600">

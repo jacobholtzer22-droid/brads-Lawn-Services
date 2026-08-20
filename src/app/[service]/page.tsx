@@ -8,6 +8,7 @@ import { services, getService } from "../../../content/services";
 import { JsonLd } from "@/components/JsonLd";
 import { FAQ } from "@/components/FAQ";
 import { Reveal } from "@/components/Reveal";
+import { BeforeAfter } from "@/components/BeforeAfter";
 import {
   Breadcrumbs,
   PageHero,
@@ -47,6 +48,14 @@ export default async function ServicePage({ params }: Props) {
   const { service: slug } = await params;
   const service = getService(slug);
   if (!service) notFound();
+
+  /* Only two services have before/after pairs in the photo set today. */
+  const beforeAfterLabel =
+    service.slug === "leaf-cleanup"
+      ? "Leaf Cleanup"
+      : service.slug === "lawn-mowing"
+        ? "Hedges & Overgrowth"
+        : null;
 
   const heroSlot = service.imageSlots[0] as keyof typeof images;
   const bodyImages = service.imageSlots
@@ -267,6 +276,16 @@ export default async function ServicePage({ params }: Props) {
           </ol>
         </div>
       </section>
+
+      {/* ---------- BEFORE / AFTER (only where we have pairs) ---------- */}
+      {beforeAfterLabel && (
+        <BeforeAfter
+          filterLabel={beforeAfterLabel}
+          limit={2}
+          heading={`${service.name} before and after`}
+          intro="The same property photographed before we started and after we finished."
+        />
+      )}
 
       {/* ---------- FAQ ---------- */}
       <FAQ

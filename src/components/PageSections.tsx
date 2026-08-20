@@ -73,6 +73,7 @@ export function PageHero({
             alt={img.alt}
             fill
             priority
+            quality={58}
             sizes="100vw"
             className="absolute inset-0 -z-20 h-full w-full object-cover object-[60%_center]"
           />

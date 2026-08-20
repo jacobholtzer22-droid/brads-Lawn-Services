@@ -32,3 +32,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Raw camera originals from the 2026 photo drop — 1.4 GB, far too large for
+# git. The converted WebP files in public/images/ are what the site ships and
+# those ARE tracked. Keep the originals backed up outside the repo; to re-cut
+# them, drop the folder back in and run scripts/wire-new-photos.mjs.
+/2026 Website Photos/

@@ -35,7 +35,7 @@ export default function AreasWeServePage() {
         eyebrow="Service area"
         title={`Lawn care across ${siteConfig.location.city}, MI`}
         intro={`Brad's Lawn Services works throughout ${siteConfig.location.city}, MI and the surrounding areas. We cover ZIP codes ${siteConfig.serviceArea.zips.join(", ")}, on both residential and commercial properties.`}
-        imageSlot="heroLawn"
+        imageSlot="lawnTudorSpring"
       />
 
       <Breadcrumbs

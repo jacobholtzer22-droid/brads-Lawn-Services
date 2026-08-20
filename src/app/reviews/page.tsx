@@ -42,7 +42,7 @@ export default function ReviewsPage() {
         eyebrow="In their words"
         title="Customer reviews"
         intro={`What homeowners, landlords, and property managers around ${siteConfig.location.city} have said about working with us.`}
-        imageSlot="heroLawn"
+        imageSlot="lawnTreeSpring"
       />
 
       <Breadcrumbs
