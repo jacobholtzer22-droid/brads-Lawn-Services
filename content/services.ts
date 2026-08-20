@@ -228,10 +228,15 @@ export const services: ServiceContent[] = [
       },
     ],
     imageSlots: [
-      "aerationPlugs",
-      "aeratorMachine",
-      "aerationTines",
-      "aeratorDetail",
+      "aerFieldStripes",
+      "aerPlugsHand",
+      "aerTineCore",
+      "aerPlugAndHole",
+      "aerMachineLawn",
+      "aerControlsBranded",
+      "aerLawnStriped",
+      "aerFieldStripes",
+      "aerCrewBrandedShirt",
     ],
     faqs: [
       {
